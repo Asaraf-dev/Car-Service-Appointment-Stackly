@@ -1,0 +1,116 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101318">
+  <title>Login | Car Service Appointment Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body class="cs-auth-body">
+  <!--- Login Page --->
+  <main class="cs-auth-page">
+    <div class="cs-auth-shell">
+      <!--- Login Visual Panel --->
+      <aside class="cs-auth-visual">
+        <a href="index.html" class="cs-auth-brand" aria-label="Stackly Automotive Care home">
+          <img src="assets/images/brand-logo.webp" alt="Stackly logo">
+          <span>Automotive Care</span>
+        </a>
+        <div class="cs-auth-visual-content">
+          <span class="cs-auth-kicker"><span></span> YOUR JOURNEY STARTS HERE</span>
+          <h1>Care for your car.<br><span>Confidence</span> for<br>every journey.</h1>
+          <p>Manage your automotive care in one place, from service appointments to your account details.</p>
+          <div class="cs-auth-feature">
+            <span class="cs-auth-feature-icon"><i class="bi bi-shield-check"></i></span>
+            <div>
+              <strong>Your vehicle. Your control.</strong>
+              <span>A dedicated space for your automotive care.</span>
+            </div>
+          </div>
+        </div>
+        <div class="cs-auth-visual-footer">
+          <span>STACKLY AUTOMOTIVE CARE</span>
+          <span>DRIVE WITH CONFIDENCE <i class="bi bi-arrow-up-right"></i></span>
+        </div>
+        <span class="cs-auth-visual-decoration" aria-hidden="true"><i class="bi bi-gear-wide-connected"></i></span>
+      </aside>
+      <!--- Login Form Panel --->
+      <section class="cs-auth-form-panel">
+        <a href="index.html" class="cs-auth-home">
+          <i class="bi bi-arrow-left"></i> Back to Home
+        </a>
+        <div class="cs-auth-form-content">
+          <div class="cs-auth-mobile-brand">
+            <img src="assets/images/brand-logo.webp" alt="Stackly logo">
+          </div>
+          <span class="cs-auth-form-eyebrow">WELCOME BACK</span>
+          <h2>Sign in to your account</h2>
+          <p class="cs-auth-form-description">Enter your details to access your dashboard.</p>
+          <!--- Role Selector --->
+          <div class="cs-auth-role-label">Choose your account type <span>*</span></div>
+          <div class="cs-auth-role-switch" role="group" aria-label="Choose account type">
+            <button type="button" class="cs-auth-role-option cs-auth-role-active" data-role="client" aria-pressed="true">
+              <i class="bi bi-person"></i><span>Client</span>
+            </button>
+            <button type="button" class="cs-auth-role-option" data-role="admin" aria-pressed="false">
+              <i class="bi bi-shield-lock"></i><span>Admin</span>
+            </button>
+          </div>
+          <!--- Login Form --->
+          <form id="cs-auth-login-form" class="cs-auth-form">
+            <input type="hidden" id="cs-auth-role" name="role" value="client">
+            <div class="cs-auth-field">
+              <label for="cs-auth-email">Email address <span>*</span></label>
+              <div class="cs-auth-input-wrap">
+                <i class="bi bi-envelope cs-auth-input-icon"></i>
+                <input type="email" id="cs-auth-email" name="email" placeholder="you@example.com" autocomplete="username" required>
+              </div>
+            </div>
+            <div class="cs-auth-field">
+              <label for="cs-auth-password">Password <span>*</span></label>
+              <div class="cs-auth-input-wrap">
+                <i class="bi bi-lock cs-auth-input-icon"></i>
+                <input type="password" id="cs-auth-password" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+                <button type="button" class="cs-auth-password-toggle" id="cs-auth-password-toggle" aria-label="Show password" aria-pressed="false">
+                  <i class="bi bi-eye"></i>
+                </button>
+              </div>
+            </div>
+            <!--- Remember Me and Forgot Password --->
+            <div class="cs-auth-options">
+              <label class="cs-auth-remember">
+                <input type="checkbox" id="cs-auth-remember" name="remember">
+                <span class="cs-auth-custom-checkbox"><i class="bi bi-check2"></i></span>
+                <span>Remember me</span>
+              </label>
+              <a href="404.html" class="cs-auth-forgot">Forgot password?</a>
+            </div>
+            <p class="cs-auth-error" id="cs-auth-error" role="alert" aria-live="polite" hidden></p>
+            <button type="submit" class="cs-auth-submit">
+              <span>Login to dashboard</span><i class="bi bi-arrow-right"></i>
+            </button>
+          </form>
+          <div class="cs-auth-signup">
+            Don't have an account? <a href="register.html">Sign Up</a>
+          </div>
+          <div class="cs-auth-security">
+            <i class="bi bi-shield-check"></i>
+            <span>Your account details should always be kept private.</span>
+          </div>
+        </div>
+        <div class="cs-auth-mobile-footer">© <span id="cs-auth-year"></span> Stackly Automotive Care</div>
+      </section>
+    </div>
+  </main>
+  <!--- End Login Page --->
+  <script src="assets/js/auth.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#101318">
+    <title>Dashboard | Car Service Appointment Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="cs-db-body">
+    <!--- Dashboard Sidebar Overlay --->
+    <div class="cs-db-overlay" id="cs-db-overlay"></div>
+    <!--- Dashboard Sidebar --->
+    <aside class="cs-db-sidebar" id="cs-db-sidebar" aria-label="Dashboard navigation">
+        <div class="cs-db-sidebar-brand">
+            <a href="index.html" class="cs-db-logo" aria-label="Stackly home">
+                <img src="assets/images/brand-logo.webp" alt="Stackly">
+            </a>
+            <button type="button" class="cs-db-sidebar-close" id="cs-db-sidebar-close" aria-label="Close navigation">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <!--- Mobile User Information --->
+        <div class="cs-db-mobile-user">
+            <div class="cs-db-avatar cs-db-avatar-small">
+                <img src="assets/images/profile-1.webp" alt="Profile"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                <span><i class="bi bi-person-fill"></i></span>
+            </div>
+            <div class="cs-db-mobile-user-info">
+                <strong id="cs-db-mobile-user-name">My Account</strong>
+                <span id="cs-db-mobile-user-email">Loading email...</span>
+            </div>
+        </div>
+        <!--- Sidebar Navigation --->
+        <div class="cs-db-nav-heading">WORKSPACE</div>
+        <nav class="cs-db-nav">
+            <a href="admin-dashboard.html" class="cs-db-nav-link" data-db-page="dashboard">
+                <i class="bi bi-grid-1x2"></i><span>Dashboard</span>
+            </a>
+            <a href="admin-appointments.html" class="cs-db-nav-link cs-db-nav-active" data-db-page="appointments">
+                <i class="bi bi-calendar2-check"></i><span>Appointments</span>
+            </a>
+            <a href="admin-vehicles.html" class="cs-db-nav-link" data-db-page="vehicles">
+                <i class="bi bi-car-front"></i><span>Vehicles</span>
+            </a>
+            <a href="admin-profile.html" class="cs-db-nav-link" data-db-page="profile">
+                <i class="bi bi-person-gear"></i><span>My Profile</span>
+            </a>
+            <div class="cs-db-sidebar-bottom">
+                <div class="cs-db-sidebar-divider"></div>
+                <button type="button" class="cs-db-nav-link cs-db-logout" id="cs-db-logout">
+                    <i class="bi bi-box-arrow-left"></i><span>Logout</span>
+                </button>
+            </div>
+        </nav>
+        <!--- Sidebar Footer --->
+        <div class="cs-db-sidebar-footer">
+            <span class="cs-db-status-dot"></span>
+            <span>STACKLY AUTOMOTIVE CARE</span>
+        </div>
+    </aside>
+    <!--- Dashboard Main Area --->
+    <div class="cs-db-main">
+        <!--- Dashboard Topbar --->
+        <header class="cs-db-topbar">
+            <div class="cs-db-topbar-left">
+                <button type="button" class="cs-db-menu-toggle" id="cs-db-menu-toggle"
+                    aria-label="Open dashboard navigation" aria-controls="cs-db-sidebar" aria-expanded="false">
+                    <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="cs-db-page-heading">
+                    <span class="cs-db-page-eyebrow">STACKLY / WORKSPACE</span>
+                    <h1 id="cs-db-page-title">Dashboard</h1>
+                </div>
+            </div>
+            <!--- Desktop and Tablet User Information --->
+            <div class="cs-db-topbar-right">
+                <div class="cs-db-topbar-user">
+                    <span class="cs-db-user-label">SIGNED IN AS</span>
+                    <strong id="cs-db-topbar-email">Loading email...</strong>
+                </div>
+                <button type="button" class="cs-db-profile-button" id="cs-db-profile-button"
+                    aria-label="Open my profile" title="My Profile">
+                    <img src="assets/images/profile-1.webp" alt="Profile"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                    <span><i class="bi bi-person-fill"></i></span>
+                    <i class="bi bi-chevron-down cs-db-profile-chevron"></i>
+                </button>
+            </div>
+        </header>
+
+        <!--- Dashboard Content --->
+
+        <!--- Admin Appointments Content --->
+        <main class="cs-db-content cs-aa" id="cs-db-content">
+            <!--- Page Heading --->
+            <section class="cs-aa-heading">
+                <div>
+                    <span class="cs-aa-eyebrow">WORKSPACE / APPOINTMENTS</span>
+                    <h2>Appointment Management</h2>
+                    <p>Manage bookings, monitor service progress and keep every visit on track.</p>
+                </div>
+                <button type="button" class="cs-aa-primary-btn" id="cs-aa-add-btn">
+                    <i class="bi bi-plus-lg"></i><span>New Appointment</span>
+                </button>
+            </section>
+
+            <!--- Summary Cards --->
+            <section class="cs-aa-stats" aria-label="Appointment statistics">
+                <article class="cs-aa-stat-card">
+                    <div class="cs-aa-stat-top"><span>Total Appointments</span><span class="cs-aa-stat-icon"><i
+                                class="bi bi-calendar3"></i></span></div>
+                    <strong id="cs-aa-total">0</strong>
+                    <small>All recorded bookings</small>
+                </article>
+                <article class="cs-aa-stat-card">
+                    <div class="cs-aa-stat-top"><span>Pending</span><span class="cs-aa-stat-icon cs-aa-icon-pending"><i
+                                class="bi bi-hourglass-split"></i></span></div>
+                    <strong id="cs-aa-pending">0</strong>
+                    <small>Awaiting confirmation</small>
+                </article>
+                <article class="cs-aa-stat-card">
+                    <div class="cs-aa-stat-top"><span>Confirmed</span><span
+                            class="cs-aa-stat-icon cs-aa-icon-confirmed"><i class="bi bi-calendar2-check"></i></span>
+                    </div>
+                    <strong id="cs-aa-confirmed">0</strong>
+                    <small>Scheduled appointments</small>
+                </article>
+                <article class="cs-aa-stat-card">
+                    <div class="cs-aa-stat-top"><span>In Progress</span><span
+                            class="cs-aa-stat-icon cs-aa-icon-progress"><i class="bi bi-tools"></i></span></div>
+                    <strong id="cs-aa-progress">0</strong>
+                    <small>Currently being serviced</small>
+                </article>
+                <article class="cs-aa-stat-card">
+                    <div class="cs-aa-stat-top"><span>Completed</span><span
+                            class="cs-aa-stat-icon cs-aa-icon-completed"><i class="bi bi-check2-circle"></i></span>
+                    </div>
+                    <strong id="cs-aa-completed">0</strong>
+                    <small>Successfully completed</small>
+                </article>
+            </section>
+
+            <!--- Appointments Workspace --->
+            <section class="cs-aa-panel">
+                <div class="cs-aa-panel-heading">
+                    <div>
+                        <h3>All Appointments</h3>
+                        <p>Search and manage customer service bookings.</p>
+                    </div>
+                    <span class="cs-aa-record-count" id="cs-aa-record-count">0 records</span>
+                </div>
+
+                <!--- Search and Filters --->
+                <div class="cs-aa-toolbar">
+                    <label class="cs-aa-search">
+                        <i class="bi bi-search"></i>
+                        <input type="search" id="cs-aa-search" placeholder="Search customer, ID, vehicle..."
+                            aria-label="Search appointments">
+                    </label>
+                    <select id="cs-aa-status-filter" aria-label="Filter by status">
+                        <option value="">All statuses</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Confirmed">Confirmed</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Cancelled">Cancelled</option>
+                    </select>
+                    <select id="cs-aa-service-filter" aria-label="Filter by service">
+                        <option value="">All services</option>
+                    </select>
+                    <input type="date" id="cs-aa-date-filter" aria-label="Filter by appointment date">
+                    <button type="button" class="cs-aa-reset-btn" id="cs-aa-reset"><i
+                            class="bi bi-arrow-counterclockwise"></i> Reset</button>
+                </div>
+
+                <!--- Desktop Appointments Table --->
+                <div class="cs-aa-table-wrap">
+                    <table class="cs-aa-table">
+                        <thead>
+                            <tr>
+                                <th>Appointment</th>
+                                <th>Customer</th>
+                                <th>Vehicle</th>
+                                <th>Service</th>
+                                <th>Date &amp; Time</th>
+                                <th>Status</th>
+                                <th class="cs-aa-actions-head">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cs-aa-table-body"></tbody>
+                    </table>
+                </div>
+
+                <!--- Empty State --->
+                <div class="cs-aa-empty" id="cs-aa-empty" hidden>
+                    <span><i class="bi bi-calendar2-x"></i></span>
+                    <h4>No appointments found</h4>
+                    <p>Try changing your search or filters.</p>
+                    <button type="button" class="cs-aa-reset-btn" id="cs-aa-empty-reset">Clear filters</button>
+                </div>
+
+                <!--- Table Footer --->
+                <div class="cs-aa-table-footer">
+                    <span id="cs-aa-results-label">Showing 0 appointments</span>
+                    <div class="cs-aa-pagination">
+                        <button type="button" id="cs-aa-prev" aria-label="Previous page" disabled><i
+                                class="bi bi-chevron-left"></i></button>
+                        <span id="cs-aa-page-label">1 / 1</span>
+                        <button type="button" id="cs-aa-next" aria-label="Next page" disabled><i
+                                class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!--- Appointment Details Modal --->
+            <div class="cs-aa-modal" id="cs-aa-modal" aria-hidden="true">
+                <div class="cs-aa-modal-backdrop" data-aa-close></div>
+                <section class="cs-aa-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="cs-aa-modal-title">
+                    <div class="cs-aa-modal-header">
+                        <div>
+                            <span class="cs-aa-eyebrow">APPOINTMENT DETAILS</span>
+                            <h3 id="cs-aa-modal-title">Appointment</h3>
+                        </div>
+                        <button type="button" class="cs-aa-modal-close" data-aa-close aria-label="Close modal"><i
+                                class="bi bi-x-lg"></i></button>
+                    </div>
+                    <div class="cs-aa-modal-body" id="cs-aa-modal-body"></div>
+                    <div class="cs-aa-modal-footer" id="cs-aa-modal-footer"></div>
+                </section>
+            </div>
+
+            <!--- Create Appointment Modal --->
+            <div class="cs-aa-modal" id="cs-aa-create-modal" aria-hidden="true">
+                <div class="cs-aa-modal-backdrop" data-aa-create-close></div>
+                <section class="cs-aa-modal-dialog" role="dialog" aria-modal="true"
+                    aria-labelledby="cs-aa-create-title">
+                    <div class="cs-aa-modal-header">
+                        <div>
+                            <span class="cs-aa-eyebrow">NEW BOOKING</span>
+                            <h3 id="cs-aa-create-title">Create Appointment</h3>
+                        </div>
+                        <button type="button" class="cs-aa-modal-close" data-aa-create-close aria-label="Close modal"><i
+                                class="bi bi-x-lg"></i></button>
+                    </div>
+                    <form id="cs-aa-create-form">
+                        <div class="cs-aa-form-grid">
+                            <label>Customer name
+                                <input name="customer" type="text" required maxlength="80"
+                                    pattern="[A-Za-z]+(?: [A-Za-z]+)*"
+                                    title="Enter a name using letters and spaces only." placeholder="Full name">
+                            </label>
+                            <label>Email address<input name="email" type="email" required
+                                    placeholder="customer@example.com"></label>
+                            <label>Phone number
+                                <input name="phone" type="tel" inputmode="numeric" pattern="[0-9]{10}" minlength="10"
+                                    maxlength="10" required placeholder="10-digit phone">
+                            </label>
+                            <label>Vehicle<input name="vehicle" required maxlength="100"
+                                    placeholder="e.g. Honda City"></label>
+                            <label>Registration number<input name="registration" required maxlength="20"
+                                    placeholder="e.g. TN01AB1234"></label>
+                            <label>Service
+                                <select name="service" required>
+                                    <option value="">Select service</option>
+                                    <option>General Service</option>
+                                    <option>Oil Change</option>
+                                    <option>Brake Inspection</option>
+                                    <option>Engine Diagnostics</option>
+                                    <option>AC Service</option>
+                                    <option>Wheel Alignment</option>
+                                    <option>Battery Replacement</option>
+                                </select>
+                            </label>
+                            <label>Appointment date<input name="date" type="date" required
+                                    id="cs-aa-create-date"></label>
+                            <label>Appointment time<input name="time" type="time" required></label>
+                            <label class="cs-aa-form-full">Customer notes<textarea name="notes" rows="3" maxlength="500"
+                                    placeholder="Optional notes about the vehicle or requested service"></textarea></label>
+                        </div>
+                        <div class="cs-aa-modal-footer">
+                            <button type="button" class="cs-aa-secondary-btn" data-aa-create-close>Cancel</button>
+                            <button type="submit" class="cs-aa-primary-btn"><i class="bi bi-check2"></i> Create
+                                Appointment</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+
+            <!--- Notification --->
+            <div class="cs-aa-toast" id="cs-aa-toast" role="status" aria-live="polite"></div>
+        </main>
+        <!--- Admin Appointments Content End --->
+
+        <!--- Dashboard Footer --->
+        <footer class="cs-db-footer">
+            <span>© <span id="cs-db-year"></span> Stackly Automotive Care</span>
+            <span>Built for better journeys <i class="bi bi-arrow-up-right"></i></span>
+        </footer>
+
+    </div>
+    <!--- End Dashboard Layout --->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-appointments.js" defer></script>
+</body>
+
+</html>

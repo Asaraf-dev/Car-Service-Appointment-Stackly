@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#101318">
+    <title>Dashboard | Car Service Appointment Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="cs-db-body">
+    <!--- Dashboard Sidebar Overlay --->
+    <div class="cs-db-overlay" id="cs-db-overlay"></div>
+    <!--- Dashboard Sidebar --->
+    <aside class="cs-db-sidebar" id="cs-db-sidebar" aria-label="Dashboard navigation">
+        <div class="cs-db-sidebar-brand">
+            <a href="index.html" class="cs-db-logo" aria-label="Stackly home">
+                <img src="assets/images/brand-logo.webp" alt="Stackly">
+            </a>
+            <button type="button" class="cs-db-sidebar-close" id="cs-db-sidebar-close" aria-label="Close navigation">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <!--- Mobile User Information --->
+        <div class="cs-db-mobile-user">
+            <div class="cs-db-avatar cs-db-avatar-small">
+                <img src="assets/images/profile-2.webp" alt="Profile"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                <span><i class="bi bi-person-fill"></i></span>
+            </div>
+            <div class="cs-db-mobile-user-info">
+                <strong id="cs-db-mobile-user-name">My Account</strong>
+                <span id="cs-db-mobile-user-email">Loading email...</span>
+            </div>
+        </div>
+        <!--- Sidebar Navigation --->
+        <div class="cs-db-nav-heading">WORKSPACE</div>
+        <nav class="cs-db-nav">
+            <a href="client-dashboard.html" class="cs-db-nav-link" data-db-page="dashboard">
+                <i class="bi bi-grid-1x2"></i><span>Dashboard</span>
+            </a>
+            <a href="client-appointments.html" class="cs-db-nav-link" data-db-page="appointments">
+                <i class="bi bi-calendar2-check"></i><span>Appointments</span>
+            </a>
+            <a href="client-vehicles.html" class="cs-db-nav-link cs-db-nav-active" data-db-page="vehicles">
+                <i class="bi bi-car-front"></i><span>Vehicles</span>
+            </a>
+            <a href="client-profile.html" class="cs-db-nav-link" data-db-page="profile">
+                <i class="bi bi-person-gear"></i><span>My Profile</span>
+            </a>
+            <div class="cs-db-sidebar-bottom">
+                <div class="cs-db-sidebar-divider"></div>
+                <button type="button" class="cs-db-nav-link cs-db-logout" id="cs-db-logout">
+                    <i class="bi bi-box-arrow-left"></i><span>Logout</span>
+                </button>
+            </div>
+        </nav>
+        <!--- Sidebar Footer --->
+        <div class="cs-db-sidebar-footer">
+            <span class="cs-db-status-dot"></span>
+            <span>STACKLY AUTOMOTIVE CARE</span>
+        </div>
+    </aside>
+    <!--- Dashboard Main Area --->
+    <div class="cs-db-main">
+        <!--- Dashboard Topbar --->
+        <header class="cs-db-topbar">
+            <div class="cs-db-topbar-left">
+                <button type="button" class="cs-db-menu-toggle" id="cs-db-menu-toggle"
+                    aria-label="Open dashboard navigation" aria-controls="cs-db-sidebar" aria-expanded="false">
+                    <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="cs-db-page-heading">
+                    <span class="cs-db-page-eyebrow">STACKLY / WORKSPACE</span>
+                    <h1 id="cs-db-page-title">Dashboard</h1>
+                </div>
+            </div>
+            <!--- Desktop and Tablet User Information --->
+            <div class="cs-db-topbar-right">
+                <div class="cs-db-topbar-user">
+                    <span class="cs-db-user-label">SIGNED IN AS</span>
+                    <strong id="cs-db-topbar-email">Loading email...</strong>
+                </div>
+                <button type="button" class="cs-db-profile-button" id="cs-db-profile-button"
+                    aria-label="Open my profile" title="My Profile">
+                    <img src="assets/images/profile-2.webp" alt="Profile"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                    <span><i class="bi bi-person-fill"></i></span>
+                    <i class="bi bi-chevron-down cs-db-profile-chevron"></i>
+                </button>
+            </div>
+        </header>
+
+
+        <!--- Client Vehicles Content --->
+        <main class="cs-db-content cs-cv" id="cs-db-content">
+            <!--- Page Heading --->
+            <section class="cs-cv-heading">
+                <div>
+                    <span class="cs-cv-eyebrow">YOUR WORKSPACE / GARAGE</span>
+                    <h2>My Vehicles</h2>
+                    <p>Manage your garage and keep your vehicle information in one place.</p>
+                </div>
+                <a href="404.html" class="cs-cv-primary-btn"><i class="bi bi-plus-lg"></i> Add Vehicle</a>
+            </section>
+
+            <!--- Vehicle Statistics --->
+            <section class="cs-cv-stats">
+                <article class="cs-cv-stat">
+                    <div><span>Total Vehicles</span><i class="bi bi-car-front"></i></div><strong
+                        id="cs-cv-total">0</strong><small>Vehicles in your garage</small>
+                </article>
+                <article class="cs-cv-stat">
+                    <div><span>Active</span><i class="bi bi-check-circle"></i></div><strong
+                        id="cs-cv-active">0</strong><small>Currently registered</small>
+                </article>
+                <article class="cs-cv-stat">
+                    <div><span>Electric / Hybrid</span><i class="bi bi-lightning-charge"></i></div><strong
+                        id="cs-cv-electric">0</strong><small>Efficient vehicles</small>
+                </article>
+                <article class="cs-cv-stat">
+                    <div><span>Service Due</span><i class="bi bi-wrench-adjustable"></i></div><strong
+                        id="cs-cv-due">0</strong><small>Based on demo records</small>
+                </article>
+            </section>
+
+            <!--- Garage Section --->
+            <section class="cs-cv-panel">
+                <div class="cs-cv-panel-heading">
+                    <div>
+                        <h3>Your Garage</h3>
+                        <p>View your registered vehicles and their service information.</p>
+                    </div>
+                    <span class="cs-cv-count" id="cs-cv-count">0 vehicles</span>
+                </div>
+
+                <!--- Vehicle Filters --->
+                <div class="cs-cv-toolbar">
+                    <label class="cs-cv-search"><i class="bi bi-search"></i><input type="search" id="cs-cv-search"
+                            placeholder="Search vehicle, registration..." aria-label="Search vehicles"></label>
+                    <select id="cs-cv-status" aria-label="Filter by vehicle status">
+                        <option value="">All statuses</option>
+                        <option value="Active">Active</option>
+                        <option value="In Service">In Service</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                    <select id="cs-cv-fuel" aria-label="Filter by fuel type">
+                        <option value="">All fuel types</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="Electric">Electric</option>
+                        <option value="CNG">CNG</option>
+                    </select>
+                    <button type="button" class="cs-cv-secondary-btn" id="cs-cv-reset"><i
+                            class="bi bi-arrow-counterclockwise"></i> Reset</button>
+                </div>
+
+                <!--- Vehicle Cards --->
+                <div class="cs-cv-grid" id="cs-cv-grid"></div>
+
+                <!--- Empty State --->
+                <div class="cs-cv-empty" id="cs-cv-empty" hidden>
+                    <i class="bi bi-car-front"></i>
+                    <h4>No vehicles found</h4>
+                    <p>Try a different search term or clear the filters.</p>
+                    <button type="button" class="cs-cv-secondary-btn" id="cs-cv-empty-reset">Clear Filters</button>
+                </div>
+
+                <!--- Pagination --->
+                <div class="cs-cv-footer" id="cs-cv-footer">
+                    <span id="cs-cv-results">Showing 0 vehicles</span>
+                    <div class="cs-cv-pagination">
+                        <button type="button" id="cs-cv-prev" aria-label="Previous page" disabled><i
+                                class="bi bi-chevron-left"></i></button>
+                        <span id="cs-cv-page">1 / 1</span>
+                        <button type="button" id="cs-cv-next" aria-label="Next page" disabled><i
+                                class="bi bi-chevron-right"></i></button>
+                    </div>
+                </div>
+            </section>
+
+            <!--- Vehicle Care Banner --->
+            <section class="cs-cv-care">
+                <span class="cs-cv-care-icon"><i class="bi bi-tools"></i></span>
+                <div>
+                    <h3>Keep your vehicles road-ready</h3>
+                    <p>Stay on top of routine maintenance and plan your next workshop visit.</p>
+                </div>
+                <a href="404.html">Explore Services <i class="bi bi-arrow-up-right"></i></a>
+            </section>
+        </main>
+        <!--- Client Vehicles Content End --->
+
+        <!--- Dashboard Footer --->
+        <footer class="cs-db-footer">
+            <span>© <span id="cs-db-year"></span> Stackly Automotive Care</span>
+            <span>Built for better journeys <i class="bi bi-arrow-up-right"></i></span>
+        </footer>
+    </div>
+    <!--- End Dashboard Layout --->
+    <script src="assets/js/dashboard.js" defer></script>
+    <script src="assets/js/client-vehicles.js" defer></script>
+</body>
+
+</html>

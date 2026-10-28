@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#101318">
+    <title>Dashboard | Car Service Appointment Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="cs-db-body">
+    <!--- Dashboard Sidebar Overlay --->
+    <div class="cs-db-overlay" id="cs-db-overlay"></div>
+    <!--- Dashboard Sidebar --->
+    <aside class="cs-db-sidebar" id="cs-db-sidebar" aria-label="Dashboard navigation">
+        <div class="cs-db-sidebar-brand">
+            <a href="index.html" class="cs-db-logo" aria-label="Stackly home">
+                <img src="assets/images/brand-logo.webp" alt="Stackly">
+            </a>
+            <button type="button" class="cs-db-sidebar-close" id="cs-db-sidebar-close" aria-label="Close navigation">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <!--- Mobile User Information --->
+        <div class="cs-db-mobile-user">
+            <div class="cs-db-avatar cs-db-avatar-small">
+                <img src="assets/images/profile-1.webp" alt="Profile"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                <span><i class="bi bi-person-fill"></i></span>
+            </div>
+            <div class="cs-db-mobile-user-info">
+                <strong id="cs-db-mobile-user-name">My Account</strong>
+                <span id="cs-db-mobile-user-email">Loading email...</span>
+            </div>
+        </div>
+        <!--- Sidebar Navigation --->
+        <div class="cs-db-nav-heading">WORKSPACE</div>
+        <nav class="cs-db-nav">
+            <a href="admin-dashboard.html" class="cs-db-nav-link cs-db-nav-active" data-db-page="dashboard">
+                <i class="bi bi-grid-1x2"></i><span>Dashboard</span>
+            </a>
+            <a href="admin-appointments.html" class="cs-db-nav-link" data-db-page="appointments">
+                <i class="bi bi-calendar2-check"></i><span>Appointments</span>
+            </a>
+            <a href="admin-vehicles.html" class="cs-db-nav-link" data-db-page="vehicles">
+                <i class="bi bi-car-front"></i><span>Vehicles</span>
+            </a>
+            <a href="admin-profile.html" class="cs-db-nav-link" data-db-page="profile">
+                <i class="bi bi-person-gear"></i><span>My Profile</span>
+            </a>
+            <div class="cs-db-sidebar-bottom">
+                <div class="cs-db-sidebar-divider"></div>
+                <button type="button" class="cs-db-nav-link cs-db-logout" id="cs-db-logout">
+                    <i class="bi bi-box-arrow-left"></i><span>Logout</span>
+                </button>
+            </div>
+        </nav>
+        <!--- Sidebar Footer --->
+        <div class="cs-db-sidebar-footer">
+            <span class="cs-db-status-dot"></span>
+            <span>STACKLY AUTOMOTIVE CARE</span>
+        </div>
+    </aside>
+    <!--- Dashboard Main Area --->
+    <div class="cs-db-main">
+        <!--- Dashboard Topbar --->
+        <header class="cs-db-topbar">
+            <div class="cs-db-topbar-left">
+                <button type="button" class="cs-db-menu-toggle" id="cs-db-menu-toggle"
+                    aria-label="Open dashboard navigation" aria-controls="cs-db-sidebar" aria-expanded="false">
+                    <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="cs-db-page-heading">
+                    <span class="cs-db-page-eyebrow">STACKLY / WORKSPACE</span>
+                    <h1 id="cs-db-page-title">Dashboard</h1>
+                </div>
+            </div>
+            <!--- Desktop and Tablet User Information --->
+            <div class="cs-db-topbar-right">
+                <div class="cs-db-topbar-user">
+                    <span class="cs-db-user-label">SIGNED IN AS</span>
+                    <strong id="cs-db-topbar-email">Loading email...</strong>
+                </div>
+                <button type="button" class="cs-db-profile-button" id="cs-db-profile-button"
+                    aria-label="Open my profile" title="My Profile">
+                    <img src="assets/images/profile-1.webp" alt="Profile"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                    <span><i class="bi bi-person-fill"></i></span>
+                    <i class="bi bi-chevron-down cs-db-profile-chevron"></i>
+                </button>
+            </div>
+        </header>
+
+
+        <!--- Admin Overview --->
+        <main class="cs-db-content cs-ao" id="cs-db-content">
+            <!--- Overview Welcome --->
+            <section class="cs-ao-welcome">
+                <div class="cs-ao-welcome-copy">
+                    <span class="cs-ao-eyebrow"><span></span> ADMINISTRATION / OVERVIEW</span>
+                    <h2>Good to see you, <span id="cs-ao-admin-name">Admin</span>.</h2>
+                    <p>Here's what's happening across your automotive service portal.</p>
+                </div>
+                <div class="cs-ao-welcome-actions">
+                    <span class="cs-ao-date"><i class="bi bi-calendar3"></i><span
+                            id="cs-ao-current-date">Today</span></span>
+                    <a href="404.html" class="cs-ao-primary-btn"><i class="bi bi-calendar-plus"></i>
+                        Manage appointments</a>
+                </div>
+            </section>
+
+            <!--- Overview KPI Cards --->
+            <section class="cs-ao-stats" aria-label="Business overview statistics">
+                <article class="cs-ao-stat-card">
+                    <div class="cs-ao-stat-top">
+                        <span class="cs-ao-stat-icon"><i class="bi bi-calendar2-check"></i></span>
+                        <span class="cs-ao-stat-period">ALL TIME</span>
+                    </div>
+                    <span class="cs-ao-stat-label">Total appointments</span>
+                    <strong class="cs-ao-stat-value" data-ao-count="248">248</strong>
+                    <span class="cs-ao-stat-foot"><i class="bi bi-arrow-up-right"></i> Booking activity overview</span>
+                </article>
+                <article class="cs-ao-stat-card">
+                    <div class="cs-ao-stat-top">
+                        <span class="cs-ao-stat-icon cs-ao-icon-pending"><i class="bi bi-hourglass-split"></i></span>
+                        <span class="cs-ao-stat-period">NEEDS ACTION</span>
+                    </div>
+                    <span class="cs-ao-stat-label">Pending appointments</span>
+                    <strong class="cs-ao-stat-value" data-ao-count="18">18</strong>
+                    <span class="cs-ao-stat-foot">Awaiting review or confirmation</span>
+                </article>
+                <article class="cs-ao-stat-card">
+                    <div class="cs-ao-stat-top">
+                        <span class="cs-ao-stat-icon cs-ao-icon-success"><i class="bi bi-check2-circle"></i></span>
+                        <span class="cs-ao-stat-period">COMPLETED</span>
+                    </div>
+                    <span class="cs-ao-stat-label">Completed services</span>
+                    <strong class="cs-ao-stat-value" data-ao-count="176">176</strong>
+                    <span class="cs-ao-stat-foot">Recorded completed appointments</span>
+                </article>
+                <article class="cs-ao-stat-card">
+                    <div class="cs-ao-stat-top">
+                        <span class="cs-ao-stat-icon cs-ao-icon-vehicles"><i class="bi bi-car-front"></i></span>
+                        <span class="cs-ao-stat-period">REGISTERED</span>
+                    </div>
+                    <span class="cs-ao-stat-label">Registered vehicles</span>
+                    <strong class="cs-ao-stat-value" data-ao-count="132">132</strong>
+                    <span class="cs-ao-stat-foot">Vehicles in the portal</span>
+                </article>
+            </section>
+
+            <!--- Analytics and Status --->
+            <section class="cs-ao-main-grid">
+                <!--- Appointment Activity Chart --->
+                <article class="cs-ao-panel cs-ao-activity">
+                    <div class="cs-ao-panel-heading">
+                        <div>
+                            <span class="cs-ao-panel-eyebrow">BOOKING PERFORMANCE</span>
+                            <h3>Appointment activity</h3>
+                            <p>Illustrative monthly booking volume</p>
+                        </div>
+                        <span class="cs-ao-heading-icon"><i class="bi bi-bar-chart-line"></i></span>
+                    </div>
+                    <div class="cs-ao-chart-legend">
+                        <span><i></i> Appointments</span>
+                        <span class="cs-ao-chart-unit">SAMPLE COUNTS</span>
+                    </div>
+                    <div class="cs-ao-chart" role="img"
+                        aria-label="Sample appointment counts: January 24, February 32, March 28, April 41, May 36, June 48">
+                        <div class="cs-ao-chart-grid">
+                            <span>50</span><span>40</span><span>30</span><span>20</span><span>10</span><span>0</span>
+                        </div>
+                        <div class="cs-ao-chart-bars">
+                            <div class="cs-ao-chart-column"><span class="cs-ao-bar-value">24</span>
+                                <div class="cs-ao-bar" style="--ao-bar-height:48%"></div><span
+                                    class="cs-ao-bar-label">Jan</span>
+                            </div>
+                            <div class="cs-ao-chart-column"><span class="cs-ao-bar-value">32</span>
+                                <div class="cs-ao-bar" style="--ao-bar-height:64%"></div><span
+                                    class="cs-ao-bar-label">Feb</span>
+                            </div>
+                            <div class="cs-ao-chart-column"><span class="cs-ao-bar-value">28</span>
+                                <div class="cs-ao-bar" style="--ao-bar-height:56%"></div><span
+                                    class="cs-ao-bar-label">Mar</span>
+                            </div>
+                            <div class="cs-ao-chart-column"><span class="cs-ao-bar-value">41</span>
+                                <div class="cs-ao-bar" style="--ao-bar-height:82%"></div><span
+                                    class="cs-ao-bar-label">Apr</span>
+                            </div>
+                            <div class="cs-ao-chart-column"><span class="cs-ao-bar-value">36</span>
+                                <div class="cs-ao-bar" style="--ao-bar-height:72%"></div><span
+                                    class="cs-ao-bar-label">May</span>
+                            </div>
+                            <div class="cs-ao-chart-column"><span class="cs-ao-bar-value">48</span>
+                                <div class="cs-ao-bar cs-ao-bar-highlight" style="--ao-bar-height:96%"></div><span
+                                    class="cs-ao-bar-label">Jun</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-ao-chart-footer"><i class="bi bi-info-circle"></i> Sample data for layout preview,
+                        not live reporting.</div>
+                </article>
+
+                <!--- Appointment Status Breakdown --->
+                <article class="cs-ao-panel cs-ao-status-panel">
+                    <div class="cs-ao-panel-heading">
+                        <div>
+                            <span class="cs-ao-panel-eyebrow">CURRENT WORKLOAD</span>
+                            <h3>Appointment status</h3>
+                            <p>Sample status distribution</p>
+                        </div>
+                        <span class="cs-ao-heading-icon"><i class="bi bi-pie-chart"></i></span>
+                    </div>
+                    <div class="cs-ao-status-total">
+                        <strong>248</strong>
+                        <span>Total bookings</span>
+                    </div>
+                    <div class="cs-ao-status-list">
+                        <div class="cs-ao-status-row">
+                            <div class="cs-ao-status-label"><span
+                                    class="cs-ao-status-dot cs-ao-dot-pending"></span><span>Pending</span><strong>18</strong>
+                            </div>
+                            <div class="cs-ao-status-track"><span class="cs-ao-status-fill cs-ao-fill-pending"
+                                    style="--ao-status-width:7.3%"></span></div>
+                        </div>
+                        <div class="cs-ao-status-row">
+                            <div class="cs-ao-status-label"><span
+                                    class="cs-ao-status-dot cs-ao-dot-confirmed"></span><span>Confirmed</span><strong>32</strong>
+                            </div>
+                            <div class="cs-ao-status-track"><span class="cs-ao-status-fill cs-ao-fill-confirmed"
+                                    style="--ao-status-width:12.9%"></span></div>
+                        </div>
+                        <div class="cs-ao-status-row">
+                            <div class="cs-ao-status-label"><span
+                                    class="cs-ao-status-dot cs-ao-dot-progress"></span><span>In
+                                    progress</span><strong>22</strong></div>
+                            <div class="cs-ao-status-track"><span class="cs-ao-status-fill cs-ao-fill-progress"
+                                    style="--ao-status-width:8.9%"></span></div>
+                        </div>
+                        <div class="cs-ao-status-row">
+                            <div class="cs-ao-status-label"><span
+                                    class="cs-ao-status-dot cs-ao-dot-complete"></span><span>Completed</span><strong>176</strong>
+                            </div>
+                            <div class="cs-ao-status-track"><span class="cs-ao-status-fill cs-ao-fill-complete"
+                                    style="--ao-status-width:71%"></span></div>
+                        </div>
+                    </div>
+                    <a href="404.html" class="cs-ao-panel-link">Review appointments <i
+                            class="bi bi-arrow-up-right"></i></a>
+                </article>
+            </section>
+
+            <!--- Recent Appointments --->
+            <section class="cs-ao-panel cs-ao-recent">
+                <div class="cs-ao-panel-heading cs-ao-recent-heading">
+                    <div>
+                        <span class="cs-ao-panel-eyebrow">LATEST ACTIVITY</span>
+                        <h3>Recent appointments</h3>
+                        <p>Example records to demonstrate the table layout</p>
+                    </div>
+                    <a href="404.html" class="cs-ao-panel-link">View all <i
+                            class="bi bi-arrow-up-right"></i></a>
+                </div>
+                <div class="cs-ao-table-wrap">
+                    <table class="cs-ao-table">
+                        <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>Vehicle</th>
+                                <th>Service</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="cs-ao-customer"><span class="cs-ao-customer-avatar">JR</span>
+                                        <div><strong>James Reed</strong><small>Demo record</small></div>
+                                    </div>
+                                </td>
+                                <td>Ford Focus</td>
+                                <td>General maintenance</td>
+                                <td>18 Jun 2026</td>
+                                <td><span class="cs-ao-badge cs-ao-badge-pending">Pending</span></td>
+                                <td><a href="404.html" class="cs-ao-row-action"
+                                        aria-label="View appointment"><i class="bi bi-arrow-up-right"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cs-ao-customer"><span
+                                            class="cs-ao-customer-avatar cs-ao-avatar-two">AM</span>
+                                        <div><strong>Amelia Moore</strong><small>Demo record</small></div>
+                                    </div>
+                                </td>
+                                <td>Honda Civic</td>
+                                <td>Brake service</td>
+                                <td>18 Jun 2026</td>
+                                <td><span class="cs-ao-badge cs-ao-badge-confirmed">Confirmed</span></td>
+                                <td><a href="404.html" class="cs-ao-row-action"
+                                        aria-label="View appointment"><i class="bi bi-arrow-up-right"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cs-ao-customer"><span
+                                            class="cs-ao-customer-avatar cs-ao-avatar-three">DL</span>
+                                        <div><strong>Daniel Lewis</strong><small>Demo record</small></div>
+                                    </div>
+                                </td>
+                                <td>Volkswagen Golf</td>
+                                <td>Engine diagnostics</td>
+                                <td>17 Jun 2026</td>
+                                <td><span class="cs-ao-badge cs-ao-badge-progress">In progress</span></td>
+                                <td><a href="404.html" class="cs-ao-row-action"
+                                        aria-label="View appointment"><i class="bi bi-arrow-up-right"></i></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cs-ao-customer"><span
+                                            class="cs-ao-customer-avatar cs-ao-avatar-four">SP</span>
+                                        <div><strong>Sophia Patel</strong><small>Demo record</small></div>
+                                    </div>
+                                </td>
+                                <td>Toyota Corolla</td>
+                                <td>Oil &amp; filter change</td>
+                                <td>16 Jun 2026</td>
+                                <td><span class="cs-ao-badge cs-ao-badge-complete">Completed</span></td>
+                                <td><a href="404.html" class="cs-ao-row-action"
+                                        aria-label="View appointment"><i class="bi bi-arrow-up-right"></i></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="cs-ao-mobile-records">
+                    <article class="cs-ao-mobile-record">
+                        <div class="cs-ao-mobile-record-top"><strong>James Reed</strong><span
+                                class="cs-ao-badge cs-ao-badge-pending">Pending</span></div>
+                        <span>Ford Focus · General maintenance</span><small>18 Jun 2026 · Demo record</small>
+                    </article>
+                    <article class="cs-ao-mobile-record">
+                        <div class="cs-ao-mobile-record-top"><strong>Amelia Moore</strong><span
+                                class="cs-ao-badge cs-ao-badge-confirmed">Confirmed</span></div>
+                        <span>Honda Civic · Brake service</span><small>18 Jun 2026 · Demo record</small>
+                    </article>
+                    <article class="cs-ao-mobile-record">
+                        <div class="cs-ao-mobile-record-top"><strong>Daniel Lewis</strong><span
+                                class="cs-ao-badge cs-ao-badge-progress">In progress</span></div>
+                        <span>Volkswagen Golf · Engine diagnostics</span><small>17 Jun 2026 · Demo record</small>
+                    </article>
+                    <article class="cs-ao-mobile-record">
+                        <div class="cs-ao-mobile-record-top"><strong>Sophia Patel</strong><span
+                                class="cs-ao-badge cs-ao-badge-complete">Completed</span></div>
+                        <span>Toyota Corolla · Oil &amp; filter change</span><small>16 Jun 2026 · Demo record</small>
+                    </article>
+                </div>
+            </section>
+
+            <!--- Admin Quick Actions --->
+            <section class="cs-ao-quick-section">
+                <div class="cs-ao-quick-heading">
+                    <div><span class="cs-ao-panel-eyebrow">SHORTCUTS</span>
+                        <h3>Quick actions</h3>
+                    </div>
+                </div>
+                <div class="cs-ao-quick-grid">
+                    <a href="admin-appointments.html" class="cs-ao-quick-card"><span><i
+                                class="bi bi-calendar2-plus"></i></span>
+                        <div><strong>Manage appointments</strong><small>Review and update bookings</small></div><i
+                            class="bi bi-arrow-up-right cs-ao-quick-arrow"></i>
+                    </a>
+                    <a href="admin-vehicles.html" class="cs-ao-quick-card"><span><i class="bi bi-car-front"></i></span>
+                        <div><strong>Vehicle records</strong><small>View registered vehicles</small></div><i
+                            class="bi bi-arrow-up-right cs-ao-quick-arrow"></i>
+                    </a>
+                    <a href="admin-profile.html" class="cs-ao-quick-card"><span><i class="bi bi-person-gear"></i></span>
+                        <div><strong>Admin profile</strong><small>View your account details</small></div><i
+                            class="bi bi-arrow-up-right cs-ao-quick-arrow"></i>
+                    </a>
+                </div>
+            </section>
+        </main>
+        <!--- End Admin Overview --->
+
+
+        <!--- Dashboard Footer --->
+        <footer class="cs-db-footer">
+            <span>© <span id="cs-db-year"></span> Stackly Automotive Care</span>
+            <span>Built for better journeys <i class="bi bi-arrow-up-right"></i></span>
+        </footer>
+    </div>
+    <!--- End Dashboard Layout --->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-overview.js" defer></script>
+</body>
+
+</html>

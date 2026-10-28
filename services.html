@@ -1,0 +1,491 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Car Service Appointment Portal </title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Main favicon -->
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- webp favicons -->
+    <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+    <!-- Apple -->
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+    <!-- Android -->
+    <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+    <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+    <!-- Manifest -->
+    <link rel="manifest" href="assets/images/site.webmanifest" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--- Bootstrap Icon --->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/loader.css" />
+    <link rel="stylesheet" href="assets/css/navbar.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+    <!--- Loader Start --->
+    <div class="cs-ldr-loader" id="cs-ldr-loader" role="status" aria-label="Loading website">
+        <div class="cs-ldr-atmosphere" id="cs-ldr-particles"></div>
+        <div class="cs-ldr-content">
+            <a href="index.html" class="cs-ldr-brand" aria-label="Stackly home">
+                <img src="assets/images/brand-logo.webp" alt="">
+            </a>
+            <div class="cs-ldr-visual">
+                <div class="cs-ldr-orbit cs-ldr-orbit-one"></div>
+                <div class="cs-ldr-orbit cs-ldr-orbit-two"></div>
+                <div class="cs-ldr-car-glow"></div>
+                <div class="cs-ldr-car"><i class="bi bi-car-front-fill"></i></div>
+                <div class="cs-ldr-road">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+            <div class="cs-ldr-heading">ENGINEERING <span>EXCELLENCE.</span></div>
+            <p class="cs-ldr-description" id="cs-ldr-message">Preparing your driving experience...</p>
+            <div class="cs-ldr-status"><span class="cs-ldr-status-dot"></span><span>PRECISION CARE. EVERY MILE.</span>
+            </div>
+        </div>
+        <div class="cs-ldr-corner cs-ldr-corner-tl"></div>
+        <div class="cs-ldr-corner cs-ldr-corner-br"></div>
+        <div class="cs-ldr-footer"><span>STACKLY AUTOMOTIVE CARE</span><span>BUILT AROUND YOUR DRIVE</span></div>
+    </div>
+    <!--- Loader End --->
+
+    <!--- Navbar Component --->
+    <div id="cs-navbar-component"></div>
+
+    <main>
+        <!--- Sub Hero Section Start --->
+        <section class="cs-all-hero" id="cs-all-hero" data-cs-hero data-page="Services"
+            data-eyebrow="PRECISION IN EVERY DETAIL"
+            style="--cs-all-hero-image:url('../images/Service_hero_img.webp');">
+            <div class="cs-all-hero-background" aria-hidden="true"></div>
+            <div class="cs-all-hero-grid" aria-hidden="true"></div>
+            <div class="cs-all-hero-glow" aria-hidden="true"></div>
+            <div class="cs-all-hero-orbit cs-all-hero-orbit-one" aria-hidden="true"></div>
+            <div class="cs-all-hero-orbit cs-all-hero-orbit-two" aria-hidden="true"></div>
+            <div class="cs-all-hero-container container">
+                <div class="cs-all-hero-content">
+                    <nav class="cs-all-hero-breadcrumb" aria-label="Breadcrumb">
+                        <a href="index.html"><i class="bi bi-house-door"></i><span>Home</span></a>
+                        <i class="bi bi-chevron-right cs-all-hero-breadcrumb-divider"></i>
+                        <span class="cs-all-hero-breadcrumb-current" aria-current="page">About Us</span>
+                    </nav>
+                    <div class="cs-all-hero-eyebrow">
+                        <span class="cs-all-hero-eyebrow-line"></span>
+                        <span class="cs-all-hero-eyebrow-text">GET TO KNOW STACKLY</span>
+                        <span class="cs-all-hero-eyebrow-dot"></span>
+                    </div>
+                    <h1 class="cs-all-hero-title">More than a garage.<br><span>A better way to <em>care</em> for your
+                            car.</span></h1>
+                    <div class="cs-all-hero-actions">
+                        <a href="404.html" class="cs-all-hero-primary">
+                            <span>Book an Appointment</span>
+                            <span class="cs-all-hero-primary-icon"><i class="bi bi-arrow-up-right"></i></span>
+                        </a>
+                        <a href="404.html" class="cs-all-hero-secondary">
+                            <span class="cs-all-hero-play"><i class="bi bi-arrow-down-right"></i></span>
+                            <span>Contact Us</span>
+                        </a>
+                    </div>
+                    <div class="cs-all-hero-bottom">
+                        <div class="cs-all-hero-bottom-line"></div>
+                        <span>BUILT AROUND YOUR DRIVE</span>
+                    </div>
+                </div>
+                <div class="cs-all-hero-side" aria-hidden="true">
+                    <span class="cs-all-hero-side-text">STACKLY AUTOMOTIVE CARE</span>
+                    <span class="cs-all-hero-side-line"></span>
+                    <span class="cs-all-hero-side-number">01 <i>/</i> 04</span>
+                </div>
+            </div>
+            <a class="cs-all-hero-scroll" aria-label="Scroll to the next section">
+                <span class="cs-all-hero-scroll-text">SCROLL TO EXPLORE</span>
+                <span class="cs-all-hero-scroll-icon"><i class="bi bi-arrow-down"></i></span>
+            </a>
+            <div class="cs-all-hero-bottom-edge" aria-hidden="true"><span></span></div>
+        </section>
+        <!--- Sub Hero Section End --->
+
+        <!--- Our Service Categories Section Start --->
+        <section class="cs-srv-categories" id="service-categories">
+            <div class="container">
+                <div class="cs-srv-categories-heading">
+                    <div class="cs-srv-categories-intro">
+                        <span class="cs-srv-categories-eyebrow"><span></span> WHAT WE DO</span>
+                        <h2>Complete care.<br><span>Every part of your drive.</span></h2>
+                    </div>
+                    <div class="cs-srv-categories-description">
+                        <p>From everyday servicing to complex vehicle concerns, discover the care your car needs to
+                            perform at its best.</p>
+                        <a href="404.html" class="cs-srv-categories-all">
+                            Book a service <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="cs-srv-categories-grid">
+                    <!--- Service 01 --->
+                    <article class="cs-srv-card">
+                        <a class="cs-srv-card-image">
+                            <img src="assets/images/general-maintenance.webp"
+                                alt="General car maintenance in an automotive workshop" loading="lazy">
+                            <span class="cs-srv-card-number">01</span>
+
+                        </a>
+                        <div class="cs-srv-card-content">
+                            <span class="cs-srv-card-type">ROUTINE CARE</span>
+                            <h3>General Maintenance</h3>
+                            <p>Keep your vehicle running smoothly with regular checks and essential maintenance.</p>
+                            <a href="404.html" class="cs-srv-card-link">Explore
+                                service <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!--- Service 02 --->
+                    <article class="cs-srv-card">
+                        <a class="cs-srv-card-image">
+                            <img src="assets/images/engine-diagnostics.webp"
+                                alt="Technician diagnosing a vehicle engine" loading="lazy">
+                            <span class="cs-srv-card-number">02</span>
+                        </a>
+                        <div class="cs-srv-card-content">
+                            <span class="cs-srv-card-type">FAULT FINDING</span>
+                            <h3>Engine Diagnostics</h3>
+                            <p>Identify warning lights and performance concerns with diagnostic checks.</p>
+                            <a href="404.html" class="cs-srv-card-link">Explore
+                                service <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!--- Service 03 --->
+                    <article class="cs-srv-card">
+                        <a class="cs-srv-card-image">
+                            <img src="assets/images/brake-service.webp" alt="Close-up of a car brake disc and caliper"
+                                loading="lazy">
+                            <span class="cs-srv-card-number">03</span>
+                        </a>
+                        <div class="cs-srv-card-content">
+                            <span class="cs-srv-card-type">SAFETY FIRST</span>
+                            <h3>Brake Service</h3>
+                            <p>Brake inspections and repair options to help maintain reliable stopping performance.</p>
+                            <a href="404.html" class="cs-srv-card-link">Explore service
+                                <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!--- Service 04 --->
+                    <article class="cs-srv-card">
+                        <a class="cs-srv-card-image">
+                            <img src="assets/images/oil-filter-change.webp" alt="Engine oil and filter maintenance"
+                                loading="lazy">
+                            <span class="cs-srv-card-number">04</span>
+                        </a>
+                        <div class="cs-srv-card-content">
+                            <span class="cs-srv-card-type">ENGINE CARE</span>
+                            <h3>Oil &amp; Filter Change</h3>
+                            <p>Support engine health with the appropriate oil and filter replacement for your vehicle.
+                            </p>
+                            <a href="404.html" class="cs-srv-card-link">Explore service <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!--- Service 05 --->
+                    <article class="cs-srv-card">
+                        <a class="cs-srv-card-image">
+                            <img src="assets/images/battery-electrical.webp" alt="Automotive battery inspection"
+                                loading="lazy">
+                            <span class="cs-srv-card-number">05</span>
+                        </a>
+                        <div class="cs-srv-card-content">
+                            <span class="cs-srv-card-type">POWER &amp; SYSTEMS</span>
+                            <h3>Battery &amp; Electrical</h3>
+                            <p>Checks for battery condition, starting issues and selected electrical faults.</p>
+                            <a href="404.html" class="cs-srv-card-link">Explore service <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!--- Service 06 --->
+                    <article class="cs-srv-card">
+                        <a class="cs-srv-card-image">
+                            <img src="assets/images/tyre-wheel-service.webp" alt="Car tyre and alloy wheel inspection"
+                                loading="lazy">
+                            <span class="cs-srv-card-number">06</span>
+                        </a>
+                        <div class="cs-srv-card-content">
+                            <span class="cs-srv-card-type">ROAD READY</span>
+                            <h3>Tyre &amp; Wheel Service</h3>
+                            <p>Tyre condition, pressure and wheel checks for everyday driving confidence.</p>
+                            <a href="404.html" class="cs-srv-card-link">Explore service <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!--- Service 07 --->
+                    <article class="cs-srv-card">
+                        <a class="cs-srv-card-image">
+                            <img src="assets/images/air-conditioning.webp"
+                                alt="Technician checking automotive air conditioning system" loading="lazy">
+                            <span class="cs-srv-card-number">07</span>
+                        </a>
+                        <div class="cs-srv-card-content">
+                            <span class="cs-srv-card-type">CABIN COMFORT</span>
+                            <h3>Air Conditioning</h3>
+                            <p>Investigate cooling issues and check key components of your car's AC system.</p>
+                            <a href="404.html" class="cs-srv-card-link">Explore
+                                service <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!--- Service 08 --->
+                    <article class="cs-srv-card">
+                        <a class="cs-srv-card-image">
+                            <img src="assets/images/transmission-service.webp"
+                                alt="Automotive transmission components during service" loading="lazy">
+                            <span class="cs-srv-card-number">08</span>
+                        </a>
+                        <div class="cs-srv-card-content">
+                            <span class="cs-srv-card-type">DRIVETRAIN</span>
+                            <h3>Transmission Service</h3>
+                            <p>Inspection and servicing options for transmission-related concerns.</p>
+                            <a href="404.html" class="cs-srv-card-link">Explore
+                                service <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!--- Service 09 --->
+                    <article class="cs-srv-card">
+                        <a class="cs-srv-card-image">
+                            <img src="assets/images/suspension-steering.webp"
+                                alt="Vehicle suspension and steering components" loading="lazy">
+                            <span class="cs-srv-card-number">09</span>
+                        </a>
+                        <div class="cs-srv-card-content">
+                            <span class="cs-srv-card-type">HANDLING</span>
+                            <h3>Suspension &amp; Steering</h3>
+                            <p>Check unusual noises, steering concerns and suspension-related wear.</p>
+                            <a href="404.html" class="cs-srv-card-link">Explore service <i
+                                    class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!--- Service 10 --->
+                    <article class="cs-srv-card">
+                        <a class="cs-srv-card-image">
+                            <img src="assets/images/vehicle-inspection.webp"
+                                alt="Mechanic inspecting a vehicle in a workshop" loading="lazy">
+                            <span class="cs-srv-card-number">10</span>
+                        </a>
+                        <div class="cs-srv-card-content">
+                            <span class="cs-srv-card-type">PREVENTIVE CARE</span>
+                            <h3>Vehicle Inspection</h3>
+                            <p>Review key vehicle components and identify issues that may need attention.</p>
+                            <a href="404.html" class="cs-srv-card-link">Explore
+                                service <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!--- Service 11 --->
+                    <article class="cs-srv-card">
+                        <a class="cs-srv-card-image">
+                            <img src="assets/images/engine-repair.webp" alt="Mechanic working on a car engine"
+                                loading="lazy">
+                            <span class="cs-srv-card-number">11</span>
+                        </a>
+                        <div class="cs-srv-card-content">
+                            <span class="cs-srv-card-type">REPAIR &amp; RESTORE</span>
+                            <h3>Engine Repair</h3>
+                            <p>Assessment of engine issues and repair recommendations based on findings.</p>
+                            <a href="404.html" class="cs-srv-card-link">Explore service
+                                <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <!--- Service 12 --->
+                    <article class="cs-srv-card">
+                        <a class="cs-srv-card-image">
+                            <img src="assets/images/vehicle-detailing.webp"
+                                alt="Professional cleaning and detailing of a car exterior" loading="lazy">
+                            <span class="cs-srv-card-number">12</span>
+                        </a>
+                        <div class="cs-srv-card-content">
+                            <span class="cs-srv-card-type">FINISHING TOUCH</span>
+                            <h3>Vehicle Detailing</h3>
+                            <p>Interior and exterior cleaning options to refresh your vehicle's appearance.</p>
+                            <a href="404.html" class="cs-srv-card-link">Explore
+                                service <i class="bi bi-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="cs-srv-categories-bottom">
+                    <span>NOT SURE WHAT YOUR CAR NEEDS?</span>
+                    <p>Tell us what's happening. We'll help you choose the right appointment.</p>
+                    <a href="contact.html">Talk to our team <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </section>
+        <!--- Our Service Categories Section End --->
+
+        <!--- What's Included in Our Care Section Start --->
+        <section class="cs-srv-care" id="whats-included">
+            <div class="container">
+                <!--- Section Heading --->
+                <div class="cs-srv-care-heading">
+                    <div>
+                        <span class="cs-srv-care-eyebrow"><span></span> THE STACKLY STANDARD</span>
+                        <h2>Every detail matters.<br><span>Every visit counts.</span></h2>
+                    </div>
+                    <p>Good vehicle care is about more than fixing a problem. It's about understanding your car,
+                        checking what matters and helping you make informed decisions.</p>
+                </div>
+                <!--- Care Main Layout --->
+                <div class="cs-srv-care-layout">
+                    <!--- Image Panel --->
+                    <div class="cs-srv-care-visual">
+                        <img src="assets/images/care-inspection.webp"
+                            alt="Automotive technician carefully inspecting a vehicle in a professional workshop"
+                            loading="lazy">
+                        <div class="cs-srv-care-visual-shade"></div>
+                        <div class="cs-srv-care-visual-top">
+                            <span class="cs-srv-care-live-dot"></span>
+                            <span>CARE IN EVERY DETAIL</span>
+                        </div>
+                        <div class="cs-srv-care-visual-caption">
+                            <span class="cs-srv-care-caption-index">STACKLY / 001</span>
+                            <h3>Look closer.<br>Care better.</h3>
+                            <p>A thoughtful approach to vehicle maintenance.</p>
+                        </div>
+                        <div class="cs-srv-care-visual-mark"><i class="bi bi-gear-wide-connected"></i></div>
+                    </div>
+                    <!--- Included Checklist --->
+                    <div class="cs-srv-care-details">
+                        <div class="cs-srv-care-details-head">
+                            <span>YOUR SERVICE EXPERIENCE</span>
+                            <span class="cs-srv-care-details-count">01 — 06</span>
+                        </div>
+                        <!--- Item 01 --->
+                        <article class="cs-srv-care-item">
+                            <span class="cs-srv-care-item-number">01</span>
+                            <div class="cs-srv-care-item-icon"><i class="bi bi-search"></i></div>
+                            <div class="cs-srv-care-item-copy">
+                                <h3>Vehicle Assessment</h3>
+                                <p>Understand your concerns and assess the relevant areas of your vehicle.</p>
+                            </div>
+                           
+                        </article>
+                        <!--- Item 02 --->
+                        <article class="cs-srv-care-item">
+                            <span class="cs-srv-care-item-number">02</span>
+                            <div class="cs-srv-care-item-icon"><i class="bi bi-cpu"></i></div>
+                            <div class="cs-srv-care-item-copy">
+                                <h3>Diagnostic Checks</h3>
+                                <p>Use appropriate checks to help identify faults and potential causes.</p>
+                            </div>
+                     
+                        </article>
+                        <!--- Item 03 --->
+                        <article class="cs-srv-care-item">
+                            <span class="cs-srv-care-item-number">03</span>
+                            <div class="cs-srv-care-item-icon"><i class="bi bi-clipboard2-check"></i></div>
+                            <div class="cs-srv-care-item-copy">
+                                <h3>Clear Recommendations</h3>
+                                <p>Understand the findings and the next steps recommended for your car.</p>
+                            </div>
+                           
+                        </article>
+                        <!--- Item 04 --->
+                        <article class="cs-srv-care-item">
+                            <span class="cs-srv-care-item-number">04</span>
+                            <div class="cs-srv-care-item-icon"><i class="bi bi-tools"></i></div>
+                            <div class="cs-srv-care-item-copy">
+                                <h3>Service &amp; Repairs</h3>
+                                <p>Get the agreed maintenance or repair work carried out where offered.</p>
+                            </div>
+                            
+                        </article>
+                        <!--- Item 05 --->
+                        <article class="cs-srv-care-item">
+                            <span class="cs-srv-care-item-number">05</span>
+                            <div class="cs-srv-care-item-icon"><i class="bi bi-check2-circle"></i></div>
+                            <div class="cs-srv-care-item-copy">
+                                <h3>Final Checks</h3>
+                                <p>Review the completed work and perform relevant checks as appropriate.</p>
+                            </div>
+                         
+                        </article>
+                        <!--- Item 06 --->
+                        <article class="cs-srv-care-item">
+                            <span class="cs-srv-care-item-number">06</span>
+                            <div class="cs-srv-care-item-icon"><i class="bi bi-chat-square-text"></i></div>
+                            <div class="cs-srv-care-item-copy">
+                                <h3>Helpful Guidance</h3>
+                                <p>Get an explanation of the work completed and any follow-up needs identified.</p>
+                            </div>
+                        
+                        </article>
+                        <!--- Checklist Footer --->
+                        <div class="cs-srv-care-details-footer">
+                            <span><i class="bi bi-info-circle"></i> Inclusions depend on the service booked.</span>
+                            <a href="404.html">Plan your visit <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!--- Care Principles --->
+                <div class="cs-srv-care-principles">
+                    <div class="cs-srv-care-principle">
+                        <i class="bi bi-chat-left-text"></i>
+                        <div>
+                            <h4>Clear Communication</h4>
+                            <p>Know what your vehicle needs.</p>
+                        </div>
+                    </div>
+                    <div class="cs-srv-care-principle">
+                        <i class="bi bi-gear"></i>
+                        <div>
+                            <h4>Careful Work</h4>
+                            <p>Attention to the job at hand.</p>
+                        </div>
+                    </div>
+                    <div class="cs-srv-care-principle">
+                        <i class="bi bi-person-check"></i>
+                        <div>
+                            <h4>Customer First</h4>
+                            <p>Guidance to support your choices.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--- What's Included in Our Care Section End --->
+
+    </main>
+
+    <!--- Footer Component --->
+    <div id="cs-footer-component"></div>
+    <!--- Js Files --->
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/loader.js"></script>
+    <script src="assets/js/navbar.js"></script>
+    <script src="assets/js/footer.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/services.js"></script>
+    <script src="assets/js/all-hero.js"></script>
+</body>
+
+</html>

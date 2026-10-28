@@ -1,0 +1,564 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Car Service Appointment Portal </title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Main favicon -->
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- webp favicons -->
+  <link rel="icon" type="image/webp" sizes="16x16" href="assets/images/favicon-16x16.png" />
+  <link rel="icon" type="image/webp" sizes="32x32" href="assets/images/favicon-32x32.png" />
+
+  <!-- Apple -->
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+
+  <!-- Android -->
+  <link rel="icon" type="image/webp" sizes="192x192" href="assets/images/android-chrome-192x192.png" />
+  <link rel="icon" type="image/webp" sizes="512x512" href="assets/images/android-chrome-512x512.png" />
+
+  <!-- Manifest -->
+  <link rel="manifest" href="assets/images/site.webmanifest" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!--- Bootstrap Icon --->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/loader.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <!--- Loader Start --->
+  <div class="cs-ldr-loader" id="cs-ldr-loader" role="status" aria-label="Loading website">
+    <div class="cs-ldr-atmosphere" id="cs-ldr-particles"></div>
+    <div class="cs-ldr-content">
+      <a href="index.html" class="cs-ldr-brand" aria-label="Stackly home">
+        <img src="assets/images/brand-logo.webp" alt="">
+      </a>
+      <div class="cs-ldr-visual">
+        <div class="cs-ldr-orbit cs-ldr-orbit-one"></div>
+        <div class="cs-ldr-orbit cs-ldr-orbit-two"></div>
+        <div class="cs-ldr-car-glow"></div>
+        <div class="cs-ldr-car"><i class="bi bi-car-front-fill"></i></div>
+        <div class="cs-ldr-road">
+          <span></span><span></span><span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="cs-ldr-heading">ENGINEERING <span>EXCELLENCE.</span></div>
+      <p class="cs-ldr-description" id="cs-ldr-message">Preparing your driving experience...</p>
+      <div class="cs-ldr-status"><span class="cs-ldr-status-dot"></span><span>PRECISION CARE. EVERY MILE.</span></div>
+    </div>
+    <div class="cs-ldr-corner cs-ldr-corner-tl"></div>
+    <div class="cs-ldr-corner cs-ldr-corner-br"></div>
+    <div class="cs-ldr-footer"><span>STACKLY AUTOMOTIVE CARE</span><span>BUILT AROUND YOUR DRIVE</span></div>
+  </div>
+  <!--- Loader End --->
+
+  <!--- Navbar Component --->
+  <div id="cs-navbar-component"></div>
+
+  <main>
+
+    <!--- Hero Section Start --->
+    <section class="cs-ind-hero" id="cs-ind-hero">
+      <!--- Hero Background --->
+      <div class="cs-ind-hero-bg"></div>
+      <div class="cs-ind-hero-grid"></div>
+      <div class="cs-ind-hero-glow"></div>
+      <!--- Hero Main Container --->
+      <div class="container cs-ind-hero-container">
+        <div class="cs-ind-hero-content">
+          <!--- Hero Eyebrow --->
+          <div class="cs-ind-hero-eyebrow">
+            <span class="cs-ind-hero-eyebrow-line"></span>
+            <span>PREMIUM AUTOMOTIVE CARE</span>
+            <span class="cs-ind-hero-eyebrow-dot"></span>
+          </div>
+          <!--- Hero Heading --->
+          <h1 class="cs-ind-hero-title">
+            Your car deserves
+            <span class="cs-ind-hero-title-outline">more than</span>
+            <span class="cs-ind-hero-title-accent">a quick fix.</span>
+          </h1>
+          <!--- Hero Description --->
+          <p class="cs-ind-hero-description">
+            Precision servicing. Expert hands. Complete peace of mind.
+            We keep your vehicle performing at its best, mile after mile.
+          </p>
+          <!--- Hero Actions --->
+          <div class="cs-ind-hero-actions">
+            <a href="404.html" class="cs-ind-hero-btn-primary">
+              <span>Book Your Service</span>
+              <span class="cs-ind-hero-btn-icon"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <a href="404.html" class="cs-ind-hero-btn-secondary">
+              <span class="cs-ind-hero-play"><i class="bi bi-arrow-right"></i></span>
+              <span>Explore Our Services</span>
+            </a>
+          </div>
+          <!--- Hero Trust Indicators --->
+          <div class="cs-ind-hero-trust">
+            <div class="cs-ind-hero-trust-item">
+              <span class="cs-ind-hero-trust-icon"><i class="bi bi-shield-check"></i></span>
+              <span><strong>Expert Care</strong><small>Skilled technicians</small></span>
+            </div>
+            <span class="cs-ind-hero-trust-divider"></span>
+            <div class="cs-ind-hero-trust-item">
+              <span class="cs-ind-hero-trust-icon"><i class="bi bi-gear-wide-connected"></i></span>
+              <span><strong>Precision Work</strong><small>Quality first</small></span>
+            </div>
+          </div>
+        </div>
+        <!--- Hero Image Composition --->
+        <div class="cs-ind-hero-visual">
+          <div class="cs-ind-hero-image-frame">
+            <img class="cs-ind-hero-image" src="assets/images/Hero_img.webp"
+              alt="Premium modern car in a dramatic automotive setting" fetchpriority="high">
+            <div class="cs-ind-hero-image-shade"></div>
+            <div class="cs-ind-hero-image-topline">
+              <span class="cs-ind-hero-live-dot"></span>
+              <span>CARE IN EVERY DETAIL</span>
+            </div>
+            <div class="cs-ind-hero-image-caption">
+              <span class="cs-ind-hero-caption-index">01 <i></i> 03</span>
+              <span class="cs-ind-hero-caption-title">ENGINEERED TO PERFORM.</span>
+            </div>
+            <div class="cs-ind-hero-image-corner"></div>
+          </div>
+          <!--- Floating Service Image --->
+          <div class="cs-ind-hero-floating-card">
+            <div class="cs-ind-hero-floating-image">
+              <img src="assets/images/Hero_mini_img.webp" alt="Automotive engine inspection detail" loading="lazy">
+              <span class="cs-ind-hero-floating-image-icon"><i class="bi bi-wrench-adjustable"></i></span>
+            </div>
+            <div class="cs-ind-hero-floating-info">
+              <span class="cs-ind-hero-floating-label">OUR APPROACH</span>
+              <strong>Beyond the basics.</strong>
+              <a href="404.html">Discover Stackly <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+          </div>
+          <!--- Floating Decorative Number --->
+          <div class="cs-ind-hero-vertical-label">PERFORMANCE <span>·</span> PRECISION <span>·</span> TRUST</div>
+          <div class="cs-ind-hero-orbit"></div>
+        </div>
+      </div>
+      <!--- Hero Bottom Bar --->
+      <div class="cs-ind-hero-bottom">
+        <div class="cs-ind-hero-bottom-inner">
+          <span class="cs-ind-hero-bottom-label">MADE FOR THE ROAD AHEAD</span>
+          <div class="cs-ind-hero-bottom-services">
+            <span><i class="bi bi-gear"></i> Vehicle Servicing</span>
+            <span><i class="bi bi-search"></i> Diagnostics</span>
+            <span><i class="bi bi-tools"></i> Repairs & Maintenance</span>
+          </div>
+          <a href="404.html" class="cs-ind-hero-bottom-link">VIEW ALL SERVICES <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+      </div>
+    </section>
+    <!--- Hero Section End --->
+
+    <!--- Trust & Highlights Strip Section Start --->
+    <section class="cs-ind-trust" aria-label="Stackly automotive care highlights">
+      <div class="container cs-ind-trust-container">
+        <!--- Trust Section Intro --->
+        <div class="cs-ind-trust-intro">
+          <span class="cs-ind-trust-kicker"><span></span> THE STACKLY STANDARD</span>
+          <p>Every detail matters.<br><strong>Every mile counts.</strong></p>
+        </div>
+        <!--- Trust Highlight Item One --->
+        <div class="cs-ind-trust-item">
+          <div class="cs-ind-trust-item-top">
+            <span class="cs-ind-trust-number">01</span>
+            <span class="cs-ind-trust-icon"><i class="bi bi-tools"></i></span>
+          </div>
+          <h3>Skilled Technicians</h3>
+          <p>Careful hands. Attention to detail.</p>
+          <span class="cs-ind-trust-item-line"></span>
+        </div>
+        <!--- Trust Highlight Item Two --->
+        <div class="cs-ind-trust-item">
+          <div class="cs-ind-trust-item-top">
+            <span class="cs-ind-trust-number">02</span>
+            <span class="cs-ind-trust-icon"><i class="bi bi-search"></i></span>
+          </div>
+          <h3>Precision Diagnostics</h3>
+          <p>Find the issue. Focus on the fix.</p>
+          <span class="cs-ind-trust-item-line"></span>
+        </div>
+        <!--- Trust Highlight Item Three --->
+        <div class="cs-ind-trust-item">
+          <div class="cs-ind-trust-item-top">
+            <span class="cs-ind-trust-number">03</span>
+            <span class="cs-ind-trust-icon"><i class="bi bi-shield-check"></i></span>
+          </div>
+          <h3>Quality-Focused Care</h3>
+          <p>Your vehicle deserves the right attention.</p>
+          <span class="cs-ind-trust-item-line"></span>
+        </div>
+        <!--- Trust Highlight Item Four --->
+        <div class="cs-ind-trust-item">
+          <div class="cs-ind-trust-item-top">
+            <span class="cs-ind-trust-number">04</span>
+            <span class="cs-ind-trust-icon"><i class="bi bi-calendar2-check"></i></span>
+          </div>
+          <h3>Easy Appointments</h3>
+          <p>A simpler way to plan your next visit.</p>
+          <span class="cs-ind-trust-item-line"></span>
+        </div>
+      </div>
+    </section>
+    <!--- Trust & Highlights Strip Section End --->
+
+    <!--- About Stackly Section Start --->
+    <section class="cs-ind-about" id="about">
+      <div class="container cs-ind-about-container">
+        <div class="cs-ind-about-visual">
+          <div class="cs-ind-about-image-wrap">
+            <img src="assets/images/about_img.webp"
+              alt="Automotive technician inspecting a vehicle in a professional workshop" class="cs-ind-about-image"
+              loading="lazy">
+            <div class="cs-ind-about-image-shade"></div>
+            <span class="cs-ind-about-image-label"><i class="bi bi-gear-wide-connected"></i> AUTOMOTIVE CARE,
+              REDEFINED</span>
+          </div>
+          <div class="cs-ind-about-side-mark">BUILT AROUND YOUR DRIVE</div>
+          <div class="cs-ind-about-accent"></div>
+
+          <span class="cs-ind-about-visual-index">01 <span>/</span> 04</span>
+        </div>
+        <div class="cs-ind-about-content">
+          <div class="cs-ind-about-eyebrow">
+            <span class="cs-ind-about-eyebrow-line"></span>
+            <span>WHO WE ARE</span>
+          </div>
+          <h2 class="cs-ind-about-title">More than a garage.<br><span>A better way to</span> <em>care for your car.</em>
+          </h2>
+          <p class="cs-ind-about-description">At Stackly Automotive Care, we believe looking after your vehicle should
+            feel straightforward, transparent and dependable. Our approach brings thoughtful service, careful attention
+            and a customer-first experience together.</p>
+          <p class="cs-ind-about-description cs-ind-about-description-secondary">From routine maintenance to identifying
+            unexpected issues, our focus is on helping you understand what your car needs and making it easier to plan
+            its care.</p>
+          <div class="cs-ind-about-divider"></div>
+          <div class="cs-ind-about-values">
+            <div class="cs-ind-about-value">
+              <span class="cs-ind-about-value-icon"><i class="bi bi-search"></i></span>
+              <div>
+                <h3>Clear Understanding</h3>
+                <p>Know what needs attention and why.</p>
+              </div>
+            </div>
+            <div class="cs-ind-about-value">
+              <span class="cs-ind-about-value-icon"><i class="bi bi-shield-check"></i></span>
+              <div>
+                <h3>Careful Attention</h3>
+                <p>A considered approach to every vehicle.</p>
+              </div>
+            </div>
+          </div>
+          <a href="404.html" class="cs-ind-about-link">
+            <span>Discover Our Approach</span>
+            <span class="cs-ind-about-link-icon"><i class="bi bi-arrow-up-right"></i></span>
+          </a>
+          <div class="cs-ind-about-bottom-mark"><span></span> KEEP YOUR JOURNEY MOVING</div>
+        </div>
+      </div>
+    </section>
+    <!--- About Stackly Section End --->
+
+    <!--- Our Services Section Start --->
+    <section class="cs-ind-services" id="services">
+      <div class="container cs-ind-services-container">
+        <div class="cs-ind-services-heading">
+          <div class="cs-ind-services-heading-copy">
+            <div class="cs-ind-services-eyebrow"><span></span> WHAT WE DO</div>
+            <h2 class="cs-ind-services-title">The right care.<br><em>For every mile.</em></h2>
+          </div>
+          <div class="cs-ind-services-heading-side">
+            <p>From routine maintenance to identifying complex issues, explore the services designed to help you care
+              for your vehicle with confidence.</p>
+            <a href="404.html" class="cs-ind-services-all-link">EXPLORE ALL SERVICES <i
+                class="bi bi-arrow-up-right"></i></a>
+          </div>
+        </div>
+        <div class="cs-ind-services-layout">
+          <article class="cs-ind-services-feature">
+            <img src="assets/images/index_service_img.webp"
+              alt="Vehicle engine and mechanical components being inspected" class="cs-ind-services-feature-image"
+              loading="lazy">
+            <div class="cs-ind-services-feature-overlay"></div>
+            <div class="cs-ind-services-feature-top">
+              <span class="cs-ind-services-feature-tag"><i class="bi bi-stars"></i> FEATURED SERVICE</span>
+              <span class="cs-ind-services-feature-number">01 / 06</span>
+            </div>
+            <div class="cs-ind-services-feature-content">
+              <span class="cs-ind-services-feature-kicker">PREVENTIVE VEHICLE CARE</span>
+              <h3>General Servicing<br>& Maintenance</h3>
+              <p>Keep your vehicle's essential maintenance on track with a service approach tailored to its needs.</p>
+              <a href="404.html" class="cs-ind-services-feature-link"
+                aria-label="Book an appointment for general servicing">
+                <span>BOOK THIS SERVICE</span>
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+            <span class="cs-ind-services-feature-watermark">CARE</span>
+          </article>
+          <div class="cs-ind-services-list">
+            <a href="404.html" class="cs-ind-services-item">
+              <span class="cs-ind-services-item-number">02</span>
+              <span class="cs-ind-services-item-icon"><i class="bi bi-cpu"></i></span>
+              <span class="cs-ind-services-item-content">
+                <strong>Vehicle Diagnostics</strong>
+                <small>Identify warning signs and investigate faults.</small>
+              </span>
+              <span class="cs-ind-services-item-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <a href="404.html" class="cs-ind-services-item">
+              <span class="cs-ind-services-item-number">03</span>
+              <span class="cs-ind-services-item-icon"><i class="bi bi-disc"></i></span>
+              <span class="cs-ind-services-item-content">
+                <strong>Brake Inspection</strong>
+                <small>Check braking components for wear and issues.</small>
+              </span>
+              <span class="cs-ind-services-item-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <a href="404.html" class="cs-ind-services-item">
+              <span class="cs-ind-services-item-number">04</span>
+              <span class="cs-ind-services-item-icon"><i class="bi bi-gear-wide-connected"></i></span>
+              <span class="cs-ind-services-item-content">
+                <strong>Engine Repair</strong>
+                <small>Investigate engine concerns and repair needs.</small>
+              </span>
+              <span class="cs-ind-services-item-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <a href="404.html" class="cs-ind-services-item">
+              <span class="cs-ind-services-item-number">05</span>
+              <span class="cs-ind-services-item-icon"><i class="bi bi-snow"></i></span>
+              <span class="cs-ind-services-item-content">
+                <strong>AC & Climate Care</strong>
+                <small>Address cooling performance and AC concerns.</small>
+              </span>
+              <span class="cs-ind-services-item-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+            <a href="404.html" class="cs-ind-services-item">
+              <span class="cs-ind-services-item-number">06</span>
+              <span class="cs-ind-services-item-icon"><i class="bi bi-lightning-charge"></i></span>
+              <span class="cs-ind-services-item-content">
+                <strong>Battery & Electrical</strong>
+                <small>Check battery health and electrical issues.</small>
+              </span>
+              <span class="cs-ind-services-item-arrow"><i class="bi bi-arrow-up-right"></i></span>
+            </a>
+          </div>
+        </div>
+        <div class="cs-ind-services-bottom">
+          <span class="cs-ind-services-bottom-label"><span></span> YOUR VEHICLE. YOUR NEXT MOVE.</span>
+          <p>Not sure what your car needs?</p>
+          <a href="404.html" class="cs-ind-services-bottom-link">LET'S FIND OUT <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+    <!--- Our Services Section End --->
+
+    <!--- How It Works Section Start --->
+    <section class="cs-ind-process" id="how-it-works">
+      <div class="container cs-ind-process-container">
+        <div class="cs-ind-process-heading">
+          <div class="cs-ind-process-heading-main">
+            <div class="cs-ind-process-eyebrow"><span></span> A SIMPLE PROCESS</div>
+            <h2 class="cs-ind-process-title">Four steps.<br><em>One smoother journey.</em></h2>
+          </div>
+          <p class="cs-ind-process-intro">Getting your vehicle the care it needs shouldn't be complicated. Here's how to
+            get started with Stackly Automotive Care.</p>
+        </div>
+        <div class="cs-ind-process-steps">
+          <div class="cs-ind-process-track" aria-hidden="true"><span></span></div>
+          <article class="cs-ind-process-step">
+            <div class="cs-ind-process-step-top">
+              <span class="cs-ind-process-number">01</span>
+              <span class="cs-ind-process-icon"><i class="bi bi-ui-checks-grid"></i></span>
+            </div>
+            <span class="cs-ind-process-step-label">STEP ONE</span>
+            <h3>Choose Your Service</h3>
+            <p>Explore our available services and select the care your vehicle needs.</p>
+            <span class="cs-ind-process-step-bottom"><i class="bi bi-check2-circle"></i> Find the right service</span>
+          </article>
+          <article class="cs-ind-process-step">
+            <div class="cs-ind-process-step-top">
+              <span class="cs-ind-process-number">02</span>
+              <span class="cs-ind-process-icon"><i class="bi bi-calendar2-week"></i></span>
+            </div>
+            <span class="cs-ind-process-step-label">STEP TWO</span>
+            <h3>Book Your Visit</h3>
+            <p>Choose a convenient date and time, then submit your appointment request.</p>
+            <span class="cs-ind-process-step-bottom"><i class="bi bi-check2-circle"></i> Pick your preferred time</span>
+          </article>
+          <article class="cs-ind-process-step">
+            <div class="cs-ind-process-step-top">
+              <span class="cs-ind-process-number">03</span>
+              <span class="cs-ind-process-icon"><i class="bi bi-clipboard2-pulse"></i></span>
+            </div>
+            <span class="cs-ind-process-step-label">STEP THREE</span>
+            <h3>Get Your Vehicle Checked</h3>
+            <p>Bring your vehicle in so the required checks and agreed service can be carried out.</p>
+            <span class="cs-ind-process-step-bottom"><i class="bi bi-check2-circle"></i> Understand the next
+              steps</span>
+          </article>
+          <article class="cs-ind-process-step">
+            <div class="cs-ind-process-step-top">
+              <span class="cs-ind-process-number">04</span>
+              <span class="cs-ind-process-icon"><i class="bi bi-car-front"></i></span>
+            </div>
+            <span class="cs-ind-process-step-label">STEP FOUR</span>
+            <h3>Get Back on the Road</h3>
+            <p>Review the completed work and any recommendations before heading off again.</p>
+            <span class="cs-ind-process-step-bottom"><i class="bi bi-check2-circle"></i> Drive with confidence</span>
+          </article>
+        </div>
+        <div class="cs-ind-process-cta">
+          <div class="cs-ind-process-cta-icon"><i class="bi bi-calendar2-plus"></i></div>
+          <div class="cs-ind-process-cta-copy">
+            <span>YOUR NEXT JOURNEY STARTS HERE</span>
+            <h3>Ready to book your service?</h3>
+            <p>Choose a service and request an appointment in just a few steps.</p>
+          </div>
+          <a href="404.html" class="cs-ind-process-cta-button">
+            <span>Book an Appointment</span>
+            <i class="bi bi-arrow-up-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!--- How It Works Section End --->
+
+    <!--- Customer Reviews Section Start --->
+<section class="cs-ind-reviews" id="reviews">
+    <div class="container cs-ind-reviews-container">
+        <div class="cs-ind-reviews-heading">
+            <div>
+                <div class="cs-ind-reviews-eyebrow"><span></span> CUSTOMER EXPERIENCES</div>
+                <h2 class="cs-ind-reviews-title">Good service.<br><em>Real peace of mind.</em></h2>
+            </div>
+            <div class="cs-ind-reviews-heading-right">
+                <p>Choosing the right automotive care should feel reassuring. We're building an experience around clear communication, thoughtful service and care for every vehicle.</p>
+                <a href="404.html" class="cs-ind-reviews-contact">HAVE A QUESTION? <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </div>
+        <div class="cs-ind-reviews-layout">
+            <article class="cs-ind-reviews-feature">
+                <div class="cs-ind-reviews-feature-top">
+                    <span class="cs-ind-reviews-quote-icon"><i class="bi bi-quote"></i></span>
+                    <span class="cs-ind-reviews-feature-index">CUSTOMER STORY <span> / 01</span></span>
+                </div>
+                <div class="cs-ind-reviews-feature-body">
+                    <span class="cs-ind-reviews-overline">WHAT MATTERS MOST</span>
+                    <blockquote>“Good automotive care starts with understanding the vehicle, explaining the options and helping customers make informed decisions.”</blockquote>
+                    <p class="cs-ind-reviews-feature-note">This is sample copy for the design preview. Replace it with a genuine customer testimonial before publishing.</p>
+                </div>
+                <div class="cs-ind-reviews-feature-footer">
+                    <div class="cs-ind-reviews-customer">
+                        <span class="cs-ind-reviews-avatar"><i class="bi bi-person"></i></span>
+                        <div>
+                            <strong>Customer Name</strong>
+                            <span>Verified customer testimonial</span>
+                        </div>
+                    </div>
+                    <span class="cs-ind-reviews-quote-mark">”</span>
+                </div>
+                <span class="cs-ind-reviews-watermark">TRUST</span>
+            </article>
+            <div class="cs-ind-reviews-side">
+                <article class="cs-ind-reviews-item">
+                    <div class="cs-ind-reviews-item-top">
+                        <span class="cs-ind-reviews-item-number">01</span>
+                        <span class="cs-ind-reviews-item-icon"><i class="bi bi-chat-square-text"></i></span>
+                    </div>
+                    <div class="cs-ind-reviews-item-content">
+                        <h3>Clear Communication</h3>
+                        <p>“I appreciated knowing what needed attention and what the next steps would be.”</p>
+                    </div>
+                    <div class="cs-ind-reviews-item-footer">
+                        <span>Customer testimonial placeholder</span>
+                      
+                    </div>
+                </article>
+                <article class="cs-ind-reviews-item">
+                    <div class="cs-ind-reviews-item-top">
+                        <span class="cs-ind-reviews-item-number">02</span>
+                        <span class="cs-ind-reviews-item-icon"><i class="bi bi-calendar2-check"></i></span>
+                    </div>
+                    <div class="cs-ind-reviews-item-content">
+                        <h3>A Simpler Booking Experience</h3>
+                        <p>“Being able to request an appointment around my schedule made planning easier.”</p>
+                    </div>
+                    <div class="cs-ind-reviews-item-footer">
+                        <span>Customer testimonial placeholder</span>
+                        
+                    </div>
+                </article>
+                <article class="cs-ind-reviews-item">
+                    <div class="cs-ind-reviews-item-top">
+                        <span class="cs-ind-reviews-item-number">03</span>
+                        <span class="cs-ind-reviews-item-icon"><i class="bi bi-tools"></i></span>
+                    </div>
+                    <div class="cs-ind-reviews-item-content">
+                        <h3>Attention to Detail</h3>
+                        <p>“I want my vehicle to receive careful attention and the right service for its needs.”</p>
+                    </div>
+                    <div class="cs-ind-reviews-item-footer">
+                        <span>Customer testimonial placeholder</span>
+                        
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="cs-ind-reviews-bottom">
+            <div class="cs-ind-reviews-bottom-left">
+                <span class="cs-ind-reviews-bottom-icon"><i class="bi bi-chat-heart"></i></span>
+                <div>
+                    <strong>Your experience matters.</strong>
+                    <p>Have feedback or a question for our team?</p>
+                </div>
+            </div>
+            <a href="404.html" class="cs-ind-reviews-bottom-link">GET IN TOUCH <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+</section>
+<!--- Customer Reviews Section End --->
+
+  </main>
+
+  <!--- Footer Component --->
+  <div id="cs-footer-component"></div>
+  <!--- Js Files --->
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="assets/js/components.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/footer.js"></script>
+
+  <!-- Page JS -->
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>

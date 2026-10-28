@@ -1,0 +1,100 @@
+
+/*--- Login Page Base ---*/
+.cs-auth-body{margin:0;min-height:100vh;background:#101318;color:#f5f6f7;font-family:var(--cs-font-body,'Inter',sans-serif);-webkit-font-smoothing:antialiased}
+.cs-auth-page{display:flex;align-items:center;justify-content:center;min-height:100vh;padding:30px;background:radial-gradient(ellipse at 85% 15%,rgba(244,119,50,.055),transparent 38%),#101318}
+.cs-auth-shell{display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:1160px;min-height:690px;border:1px solid #303640;border-radius:20px;overflow:hidden;background:#15191f;box-shadow:0 30px 100px rgba(0,0,0,.3)}
+.cs-auth-visual{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-width:0;padding:35px 38px;overflow:hidden;background:linear-gradient(145deg,#202630 0%,#141920 54%,#101318 100%)}
+.cs-auth-visual:before{position:absolute;top:0;right:0;left:0;height:3px;background:linear-gradient(90deg,#f47732,rgba(244,119,50,.05));content:""}
+.cs-auth-brand{position:relative;z-index:1;display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+.cs-auth-brand img{display:block;width:155px;max-height:54px;object-fit:contain}
+.cs-auth-brand>span{padding-left:12px;border-left:1px solid #444b55;color:#aab2bd;font-size:10px;line-height:1.5}
+.cs-auth-visual-content{position:relative;z-index:1;max-width:460px;margin:60px 0}
+.cs-auth-kicker{display:inline-flex;align-items:center;gap:9px;margin-bottom:24px;color:#f47732;font-size:9px;font-weight:800;letter-spacing:1.7px}
+.cs-auth-kicker>span{width:21px;height:2px;background:#f47732}
+.cs-auth-visual-content h1{margin:0 0 22px;color:#f5f6f7;font-family:var(--cs-font-heading,'Sora',sans-serif);font-size:clamp(34px,4vw,49px);font-weight:800;line-height:1.22;letter-spacing:-1.8px}
+.cs-auth-visual-content h1>span{color:#f47732}
+.cs-auth-visual-content>p{max-width:370px;margin:0;color:#a4adb9;font-size:12px;line-height:2}
+.cs-auth-feature{display:flex;align-items:center;gap:13px;margin-top:35px;padding:16px;border:1px solid #363e49;border-radius:11px;background:rgba(255,255,255,.025)}
+.cs-auth-feature-icon{display:grid;place-items:center;flex-shrink:0;width:42px;height:42px;border-radius:10px;background:rgba(244,119,50,.1);color:#f47732;font-size:20px}
+.cs-auth-feature>div{display:flex;flex-direction:column;gap:6px}
+.cs-auth-feature strong{color:#f0f2f5;font-size:11px;font-weight:750}
+.cs-auth-feature>div>span{color:#9ba5b2;font-size:10px;line-height:1.7}
+.cs-auth-visual-footer{position:relative;z-index:1;display:flex;justify-content:space-between;gap:15px;padding-top:22px;border-top:1px solid #363d47;color:#77818f;font-size:8px;font-weight:800;letter-spacing:1px}
+.cs-auth-visual-footer>span:last-child{color:#aeb5bf;text-align:right}
+.cs-auth-visual-footer i{margin-left:4px;color:#f47732}
+.cs-auth-visual-decoration{position:absolute;right:-90px;bottom:100px;color:rgba(244,119,50,.045);font-size:330px;line-height:1}
+.cs-auth-form-panel{position:relative;display:flex;flex-direction:column;justify-content:center;min-width:0;padding:35px 52px;background:#15191f}
+.cs-auth-home{position:absolute;top:32px;right:36px;display:inline-flex;align-items:center;gap:8px;color:#a5adb8;text-decoration:none;font-size:10px;font-weight:650;transition:color .2s}
+.cs-auth-home i{color:#f47732;font-size:14px}
+.cs-auth-home:hover{color:#f47732}
+.cs-auth-form-content{width:100%;max-width:390px;margin:45px auto 25px}
+.cs-auth-mobile-brand{display:none}
+.cs-auth-form-eyebrow{display:block;margin-bottom:12px;color:#f47732;font-size:9px;font-weight:800;letter-spacing:2px}
+.cs-auth-form-content h2{margin:0 0 10px;color:#f4f5f7;font-family:var(--cs-font-heading,'Sora',sans-serif);font-size:clamp(24px,2.7vw,31px);font-weight:800;line-height:1.35;letter-spacing:-.9px}
+.cs-auth-form-description{margin:0 0 26px;color:#9ba5b2;font-size:11px;line-height:1.8}
+.cs-auth-role-label{margin-bottom:10px;color:#e7e9ed;font-size:10px;font-weight:700}
+.cs-auth-role-label>span,.cs-auth-field label>span{color:#f47732}
+.cs-auth-role-switch{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:23px}
+.cs-auth-role-option{display:flex;align-items:center;justify-content:center;gap:9px;min-height:47px;border:1px solid #353d47;border-radius:8px;background:#191e25;color:#a9b1bc;font-family:var(--cs-font-body,'Inter',sans-serif);font-size:11px;font-weight:700;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.cs-auth-role-option>i{font-size:16px}
+.cs-auth-role-option:hover{border-color:#9b5c3c;color:#f3f4f6}
+.cs-auth-role-option.cs-auth-role-active{border-color:#f47732;background:rgba(244,119,50,.09);color:#f47732;box-shadow:inset 0 0 0 1px rgba(244,119,50,.06)}
+.cs-auth-form{display:flex;flex-direction:column;gap:19px}
+.cs-auth-field{display:flex;flex-direction:column;gap:9px;min-width:0}
+.cs-auth-field label{color:#e5e8ec;font-size:10px;font-weight:700}
+.cs-auth-input-wrap{position:relative;display:flex;align-items:center;min-width:0}
+.cs-auth-input-icon{position:absolute;left:14px;color:#7f8a98;font-size:15px;pointer-events:none}
+.cs-auth-input-wrap input{width:100%;height:48px;min-width:0;padding:0 44px 0 41px;border:1px solid #353d47;border-radius:8px;outline:none;background:#1b2027;color:#f3f4f6;font-family:var(--cs-font-body,'Inter',sans-serif);font-size:11px;transition:border-color .2s,box-shadow .2s}
+.cs-auth-input-wrap input::placeholder{color:#737e8c;opacity:1}
+.cs-auth-input-wrap input:focus{border-color:#f47732;box-shadow:0 0 0 3px rgba(244,119,50,.09)}
+.cs-auth-password-toggle{position:absolute;right:9px;display:grid;place-items:center;width:31px;height:31px;border:0;border-radius:6px;background:transparent;color:#9aa4b1;font-size:16px;cursor:pointer}
+.cs-auth-password-toggle:hover{background:#292f38;color:#f47732}
+.cs-auth-options{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0;margin-top:-3px;white-space:nowrap}
+.cs-auth-remember{display:inline-flex;align-items:center;gap:8px;min-width:0;color:#b5bdc7;font-size:10px;cursor:pointer}
+.cs-auth-remember input{position:absolute;width:1px;height:1px;opacity:0}
+.cs-auth-custom-checkbox{display:grid;place-items:center;flex-shrink:0;width:16px;height:16px;border:1px solid #515a66;border-radius:4px;background:#1b2027;color:#15191f;font-size:12px;transition:background .2s,border-color .2s}
+.cs-auth-custom-checkbox i{opacity:0}
+.cs-auth-remember input:checked+.cs-auth-custom-checkbox{border-color:#f47732;background:#f47732}
+.cs-auth-remember input:checked+.cs-auth-custom-checkbox i{opacity:1}
+.cs-auth-remember input:focus-visible+.cs-auth-custom-checkbox{outline:2px solid #f47732;outline-offset:3px}
+.cs-auth-forgot{flex-shrink:0;color:#f47732;text-decoration:none;font-size:10px;font-weight:650}
+.cs-auth-forgot:hover{text-decoration:underline}
+.cs-auth-submit{display:flex;align-items:center;justify-content:space-between;gap:15px;width:100%;min-height:49px;padding:0 16px;border:1px solid #f47732;border-radius:8px;background:#f47732;color:#17191d;font-family:var(--cs-font-heading,'Sora',sans-serif);font-size:11px;font-weight:800;cursor:pointer;transition:background .2s,border-color .2s}
+.cs-auth-submit i{font-size:17px;transition:transform .2s}
+.cs-auth-submit:hover{border-color:#ff965d;background:#ff965d}
+.cs-auth-submit:hover i{transform:translateX(4px)}
+.cs-auth-error{margin:-7px 0 0;color:#ff9b9b;font-size:10px;line-height:1.7}
+.cs-auth-signup{margin-top:23px;color:#9ca5b1;font-size:10px;text-align:center}
+.cs-auth-signup a{margin-left:4px;color:#f47732;font-weight:750;text-decoration:none}
+.cs-auth-signup a:hover{text-decoration:underline}
+.cs-auth-security{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:25px;padding-top:18px;border-top:1px solid #303640;color:#788391;font-size:9px;line-height:1.7;text-align:center}
+.cs-auth-security i{flex-shrink:0;color:#f47732;font-size:14px}
+.cs-auth-mobile-footer{display:none}
+/*--- Login Page Responsive ---*/
+@media(max-width:1050px){.cs-auth-page{padding:20px}.cs-auth-shell{max-width:900px;min-height:650px}.cs-auth-visual{padding:30px}.cs-auth-form-panel{padding:32px}.cs-auth-home{top:25px;right:25px}.cs-auth-visual-content h1{font-size:38px}}
+@media(max-width:767px){.cs-auth-page{align-items:flex-start;padding:16px}.cs-auth-shell{grid-template-columns:1fr;max-width:500px;min-height:0;border-radius:15px}.cs-auth-visual{display:none}.cs-auth-form-panel{padding:65px 30px 25px}.cs-auth-home{top:22px;right:23px}.cs-auth-form-content{max-width:390px;margin:15px auto 20px}.cs-auth-mobile-brand{display:block;margin-bottom:25px}.cs-auth-mobile-brand img{display:block;width:145px;max-height:48px;object-fit:contain}.cs-auth-form-content h2{font-size:28px}.cs-auth-mobile-footer{display:block;padding-top:17px;border-top:1px solid #303640;color:#788391;font-size:9px;text-align:center}}
+@media(max-width:575px){.cs-auth-page{padding:0;background:#15191f}.cs-auth-shell{min-height:100vh;border:0;border-radius:0;box-shadow:none}.cs-auth-form-panel{justify-content:flex-start;padding:67px 22px 22px}.cs-auth-home{top:23px;right:21px;font-size:10px}.cs-auth-form-content{margin:14px auto 25px}.cs-auth-mobile-brand{margin-bottom:28px}.cs-auth-form-content h2{font-size:26px}.cs-auth-form-description{margin-bottom:23px}.cs-auth-role-switch{gap:8px}.cs-auth-role-option{min-height:45px}.cs-auth-form{gap:18px}.cs-auth-options{gap:6px}.cs-auth-remember{gap:6px;font-size:9px}.cs-auth-forgot{font-size:9px}.cs-auth-security{font-size:8px}}
+@media(max-width:360px){.cs-auth-form-panel{padding-right:16px;padding-left:16px}.cs-auth-home{right:16px;font-size:9px}.cs-auth-form-content h2{font-size:23px}.cs-auth-options{gap:4px}.cs-auth-remember{gap:5px;font-size:8px}.cs-auth-forgot{font-size:8px}.cs-auth-input-wrap input{font-size:10px}}
+/*--- Login Page Responsive End ---*/
+
+
+
+/*--- Register Page ---*/
+.cs-auth-register-shell{grid-template-columns:.92fr 1.08fr;max-width:1160px}
+.cs-auth-register-panel{padding-top:55px;padding-bottom:35px}
+.cs-auth-register-content{max-width:410px;margin:35px auto 20px}
+.cs-auth-register-content .cs-auth-form-description{margin-bottom:21px}
+.cs-auth-register-content .cs-auth-role-switch{margin-bottom:19px}
+.cs-auth-register-content .cs-auth-form{gap:15px}
+.cs-auth-register-content .cs-auth-field{gap:7px}
+.cs-auth-register-content .cs-auth-input-wrap input{height:45px}
+.cs-auth-password-hint{display:block;color:#858f9c;font-size:9px;line-height:1.7}
+.cs-auth-register-content .cs-auth-submit{margin-top:3px}
+.cs-auth-register-content .cs-auth-signup{margin-top:20px}
+.cs-auth-register-content .cs-auth-security{margin-top:20px;padding-top:15px}
+/*--- Register Page Responsive ---*/
+@media(max-width:1050px){.cs-auth-register-shell{grid-template-columns:.85fr 1.15fr}.cs-auth-register-panel{padding:48px 28px 30px}.cs-auth-register-content{max-width:400px}.cs-auth-register-content .cs-auth-form{gap:13px}.cs-auth-register-content .cs-auth-form-description{margin-bottom:17px}}
+@media(max-width:767px){.cs-auth-register-shell{grid-template-columns:1fr;max-width:520px}.cs-auth-register-panel{padding:65px 30px 25px}.cs-auth-register-content{margin:15px auto 20px}.cs-auth-register-content .cs-auth-form{gap:16px}.cs-auth-register-content .cs-auth-input-wrap input{height:47px}}
+@media(max-width:575px){.cs-auth-register-panel{padding:67px 22px 22px}.cs-auth-register-content{margin:14px auto 25px}.cs-auth-register-content h2{font-size:25px}.cs-auth-register-content .cs-auth-form{gap:16px}.cs-auth-register-content .cs-auth-role-switch{margin-bottom:18px}.cs-auth-register-content .cs-auth-field label{font-size:10px}.cs-auth-password-hint{font-size:8px}}
+@media(max-width:360px){.cs-auth-register-panel{padding-right:16px;padding-left:16px}.cs-auth-register-content h2{font-size:22px}.cs-auth-register-content .cs-auth-form{gap:15px}}
+/*--- Register Page Responsive End ---*/

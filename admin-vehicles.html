@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#101318">
+    <title>Dashboard | Car Service Appointment Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="cs-db-body">
+    <!--- Dashboard Sidebar Overlay --->
+    <div class="cs-db-overlay" id="cs-db-overlay"></div>
+    <!--- Dashboard Sidebar --->
+    <aside class="cs-db-sidebar" id="cs-db-sidebar" aria-label="Dashboard navigation">
+        <div class="cs-db-sidebar-brand">
+            <a href="index.html" class="cs-db-logo" aria-label="Stackly home">
+                <img src="assets/images/brand-logo.webp" alt="Stackly">
+            </a>
+            <button type="button" class="cs-db-sidebar-close" id="cs-db-sidebar-close" aria-label="Close navigation">
+                <i class="bi bi-x-lg"></i>
+            </button>
+        </div>
+        <!--- Mobile User Information --->
+        <div class="cs-db-mobile-user">
+            <div class="cs-db-avatar cs-db-avatar-small">
+                <img src="assets/images/profile-1.webp" alt="Profile"
+                    onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                <span><i class="bi bi-person-fill"></i></span>
+            </div>
+            <div class="cs-db-mobile-user-info">
+                <strong id="cs-db-mobile-user-name">My Account</strong>
+                <span id="cs-db-mobile-user-email">Loading email...</span>
+            </div>
+        </div>
+        <!--- Sidebar Navigation --->
+        <div class="cs-db-nav-heading">WORKSPACE</div>
+        <nav class="cs-db-nav">
+            <a href="admin-dashboard.html" class="cs-db-nav-link" data-db-page="dashboard">
+                <i class="bi bi-grid-1x2"></i><span>Dashboard</span>
+            </a>
+            <a href="admin-appointments.html" class="cs-db-nav-link" data-db-page="appointments">
+                <i class="bi bi-calendar2-check"></i><span>Appointments</span>
+            </a>
+            <a href="admin-vehicles.html" class="cs-db-nav-link cs-db-nav-active" data-db-page="vehicles">
+                <i class="bi bi-car-front"></i><span>Vehicles</span>
+            </a>
+            <a href="admin-profile.html" class="cs-db-nav-link" data-db-page="profile">
+                <i class="bi bi-person-gear"></i><span>My Profile</span>
+            </a>
+            <div class="cs-db-sidebar-bottom">
+                <div class="cs-db-sidebar-divider"></div>
+                <button type="button" class="cs-db-nav-link cs-db-logout" id="cs-db-logout">
+                    <i class="bi bi-box-arrow-left"></i><span>Logout</span>
+                </button>
+            </div>
+        </nav>
+        <!--- Sidebar Footer --->
+        <div class="cs-db-sidebar-footer">
+            <span class="cs-db-status-dot"></span>
+            <span>STACKLY AUTOMOTIVE CARE</span>
+        </div>
+    </aside>
+    <!--- Dashboard Main Area --->
+    <div class="cs-db-main">
+        <!--- Dashboard Topbar --->
+        <header class="cs-db-topbar">
+            <div class="cs-db-topbar-left">
+                <button type="button" class="cs-db-menu-toggle" id="cs-db-menu-toggle"
+                    aria-label="Open dashboard navigation" aria-controls="cs-db-sidebar" aria-expanded="false">
+                    <i class="bi bi-three-dots"></i>
+                </button>
+                <div class="cs-db-page-heading">
+                    <span class="cs-db-page-eyebrow">STACKLY / WORKSPACE</span>
+                    <h1 id="cs-db-page-title">Dashboard</h1>
+                </div>
+            </div>
+            <!--- Desktop and Tablet User Information --->
+            <div class="cs-db-topbar-right">
+                <div class="cs-db-topbar-user">
+                    <span class="cs-db-user-label">SIGNED IN AS</span>
+                    <strong id="cs-db-topbar-email">Loading email...</strong>
+                </div>
+                <button type="button" class="cs-db-profile-button" id="cs-db-profile-button"
+                    aria-label="Open my profile" title="My Profile">
+                    <img src="assets/images/profile-1.webp" alt="Profile"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+                    <span><i class="bi bi-person-fill"></i></span>
+                    <i class="bi bi-chevron-down cs-db-profile-chevron"></i>
+                </button>
+            </div>
+        </header>
+        <!--- Dashboard Content --->
+
+        <!--- Admin Vehicles Content --->
+        <main class="cs-db-content cs-av" id="cs-db-content">
+            <!--- Page Heading --->
+            <section class="cs-av-heading">
+                <div>
+                    <span class="cs-av-eyebrow">WORKSPACE / VEHICLES</span>
+                    <h2>Vehicle Management</h2>
+                    <p>Manage registered vehicles, customer details and service records.</p>
+                </div>
+                <button type="button" class="cs-av-primary-btn" id="cs-av-add-btn"><i class="bi bi-plus-lg"></i> Add
+                    Vehicle</button>
+            </section>
+
+            <!--- Vehicle Statistics --->
+            <section class="cs-av-stats">
+                <article class="cs-av-stat">
+                    <div><span>Total Vehicles</span><i class="bi bi-car-front"></i></div><strong
+                        id="cs-av-total">0</strong><small>All registered vehicles</small>
+                </article>
+                <article class="cs-av-stat">
+                    <div><span>Active</span><i class="bi bi-check-circle"></i></div><strong
+                        id="cs-av-active">0</strong><small>Active registrations</small>
+                </article>
+                <article class="cs-av-stat">
+                    <div><span>In Service</span><i class="bi bi-tools"></i></div><strong
+                        id="cs-av-service">0</strong><small>Currently being serviced</small>
+                </article>
+                <article class="cs-av-stat">
+                    <div><span>Needs Attention</span><i class="bi bi-exclamation-circle"></i></div><strong
+                        id="cs-av-attention">0</strong><small>Inactive or flagged vehicles</small>
+                </article>
+            </section>
+
+            <!--- Vehicle List --->
+            <section class="cs-av-panel">
+                <div class="cs-av-panel-head">
+                    <div>
+                        <h3>Registered Vehicles</h3>
+                        <p>Search, review and manage vehicle information.</p>
+                    </div>
+                    <span class="cs-av-count" id="cs-av-count">0 vehicles</span>
+                </div>
+
+                <!--- Search and Filters --->
+                <div class="cs-av-toolbar">
+                    <label class="cs-av-search"><i class="bi bi-search"></i><input type="search" id="cs-av-search"
+                            placeholder="Search registration, model, owner..." aria-label="Search vehicles"></label>
+                    <select id="cs-av-status-filter" aria-label="Filter vehicle status">
+                        <option value="">All statuses</option>
+                        <option value="Active">Active</option>
+                        <option value="In Service">In Service</option>
+                        <option value="Inactive">Inactive</option>
+                    </select>
+                    <select id="cs-av-fuel-filter" aria-label="Filter fuel type">
+                        <option value="">All fuel types</option>
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Electric">Electric</option>
+                        <option value="Hybrid">Hybrid</option>
+                        <option value="CNG">CNG</option>
+                    </select>
+                    <button type="button" class="cs-av-secondary-btn" id="cs-av-reset"><i
+                            class="bi bi-arrow-counterclockwise"></i> Reset</button>
+                </div>
+
+                <!--- Vehicle Table --->
+                <div class="cs-av-table-wrap">
+                    <table class="cs-av-table">
+                        <thead>
+                            <tr>
+                                <th>Vehicle</th>
+                                <th>Registration</th>
+                                <th>Owner</th>
+                                <th>Fuel / Year</th>
+                                <th>Last Service</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cs-av-table-body"></tbody>
+                    </table>
+                </div>
+
+                <!--- Empty State --->
+                <div class="cs-av-empty" id="cs-av-empty" hidden>
+                    <i class="bi bi-car-front"></i>
+                    <h4>No vehicles found</h4>
+                    <p>Try a different search or filter.</p>
+                    <button type="button" class="cs-av-secondary-btn" id="cs-av-empty-reset">Clear filters</button>
+                </div>
+
+                <!--- Pagination --->
+                <div class="cs-av-footer">
+                    <span id="cs-av-results">Showing 0 vehicles</span>
+                    <div><button type="button" id="cs-av-prev" aria-label="Previous page" disabled><i
+                                class="bi bi-chevron-left"></i></button><span id="cs-av-page">1 / 1</span><button
+                            type="button" id="cs-av-next" aria-label="Next page" disabled><i
+                                class="bi bi-chevron-right"></i></button></div>
+                </div>
+            </section>
+
+            <!--- Vehicle Details Modal --->
+            <div class="cs-av-modal" id="cs-av-details-modal" aria-hidden="true">
+                <div class="cs-av-backdrop" data-av-close></div>
+                <section class="cs-av-dialog" role="dialog" aria-modal="true" aria-labelledby="cs-av-details-title">
+                    <header class="cs-av-modal-head">
+                        <div><span class="cs-av-eyebrow">VEHICLE INFORMATION</span>
+                            <h3 id="cs-av-details-title">Vehicle Details</h3>
+                        </div><button type="button" class="cs-av-close" data-av-close aria-label="Close"><i
+                                class="bi bi-x-lg"></i></button>
+                    </header>
+                    <div class="cs-av-details" id="cs-av-details"></div>
+                    <footer class="cs-av-modal-footer"><button type="button" class="cs-av-secondary-btn"
+                            data-av-close>Close</button></footer>
+                </section>
+            </div>
+
+            <!--- Add Vehicle Modal --->
+            <div class="cs-av-modal" id="cs-av-form-modal" aria-hidden="true">
+                <div class="cs-av-backdrop" data-av-form-close></div>
+                <section class="cs-av-dialog" role="dialog" aria-modal="true" aria-labelledby="cs-av-form-title">
+                    <header class="cs-av-modal-head">
+                        <div><span class="cs-av-eyebrow">VEHICLE REGISTRY</span>
+                            <h3 id="cs-av-form-title">Add New Vehicle</h3>
+                        </div><button type="button" class="cs-av-close" data-av-form-close aria-label="Close"><i
+                                class="bi bi-x-lg"></i></button>
+                    </header>
+                    <form id="cs-av-form">
+                        <div class="cs-av-form-grid">
+                            <label>Owner full name<input name="owner" type="text" required maxlength="80"
+                                    pattern="[A-Za-z]+(?: [A-Za-z]+)*" title="Use letters and spaces only."
+                                    placeholder="Customer full name"></label>
+                            <label>Phone number<input name="phone" type="tel" inputmode="numeric" required
+                                    minlength="10" maxlength="10" pattern="[0-9]{10}" title="Enter exactly 10 digits."
+                                    placeholder="10-digit phone number"></label>
+                            <label>Vehicle make<input name="make" required maxlength="50"
+                                    placeholder="e.g. Honda"></label>
+                            <label>Vehicle model<input name="model" required maxlength="60"
+                                    placeholder="e.g. City"></label>
+                            <label>Registration number<input name="registration" required maxlength="20"
+                                    pattern="[A-Za-z0-9 -]+" title="Use letters and numbers only."
+                                    placeholder="e.g. TN01AB1234"></label>
+                            <label>Manufacturing year<input name="year" type="number" inputmode="numeric" min="1950"
+                                    max="2026" required placeholder="e.g. 2023"></label>
+                            <label>Fuel type<select name="fuel" required>
+                                    <option value="">Select fuel</option>
+                                    <option>Petrol</option>
+                                    <option>Diesel</option>
+                                    <option>Electric</option>
+                                    <option>Hybrid</option>
+                                    <option>CNG</option>
+                                </select></label>
+                            <label>Vehicle status<select name="status" required>
+                                    <option>Active</option>
+                                    <option>In Service</option>
+                                    <option>Inactive</option>
+                                </select></label>
+                            <label>Last service date<input name="lastService" type="date"></label>
+                            <label class="cs-av-full">Notes<textarea name="notes" rows="3" maxlength="500"
+                                    placeholder="Optional vehicle notes"></textarea></label>
+                        </div>
+                        <footer class="cs-av-modal-footer"><button type="button" class="cs-av-secondary-btn"
+                                data-av-form-close>Cancel</button><button type="submit" class="cs-av-primary-btn"><i
+                                    class="bi bi-check2"></i> Save Vehicle</button></footer>
+                    </form>
+                </section>
+            </div>
+
+            <!--- Toast Notification --->
+            <div class="cs-av-toast" id="cs-av-toast" role="status" aria-live="polite"></div>
+        </main>
+        <!--- Admin Vehicles Content End --->
+
+        <!--- Dashboard Footer --->
+        <footer class="cs-db-footer">
+            <span>© <span id="cs-db-year"></span> Stackly Automotive Care</span>
+            <span>Built for better journeys <i class="bi bi-arrow-up-right"></i></span>
+        </footer>
+    </div>
+    <!--- End Dashboard Layout --->
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/admin-vehicles.js" defer></script>
+</body>
+
+</html>

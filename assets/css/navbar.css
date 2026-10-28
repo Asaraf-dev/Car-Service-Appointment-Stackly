@@ -1,0 +1,219 @@
+
+/*--- Navbar Header ---*/
+.cs-nav-header {position:relative;z-index:var(--cs-z-fixed,1030);width:100%;}
+.cs-nav-main {position:relative;width:100%;background:rgba(13,15,18,0.94);border-bottom:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:background 0.3s ease,box-shadow 0.3s ease;}
+.cs-nav-header.cs-nav-scrolled .cs-nav-main {background:rgba(13,15,18,0.98);box-shadow:0 8px 30px rgba(0,0,0,0.18);}
+/*--- Navbar Container ---*/
+.cs-nav-container {display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:88px;}
+/*--- Brand Logo ---*/
+.cs-nav-brand {display:inline-flex;align-items:center;gap:12px;flex-shrink:0;color:var(--cs-white);text-decoration:none;}
+.cs-nav-brand:hover {color:var(--cs-white);}
+.cs-nav-brand-icon {position:relative;display:flex;align-items:center;justify-content:center;width:46px;height:46px;flex-shrink:0;border:1px solid rgba(244,119,50,0.45);border-radius:13px;color:var(--cs-primary);background:linear-gradient(145deg,rgba(244,119,50,0.16),rgba(244,119,50,0.03));font-size:25px;transition:transform 0.3s ease,background 0.3s ease;}
+.cs-nav-brand:hover .cs-nav-brand-icon {transform:rotate(-7deg);background:rgba(244,119,50,0.22);}
+.cs-nav-brand-content {display:flex;flex-direction:column;align-items:flex-start;gap:4px;}
+.cs-nav-logo-img {display:block;width:132px;max-width:100%;max-height:35px;object-fit:contain;object-position:left center;}
+.cs-nav-brand-tagline {color:var(--cs-text-muted);font-size:9px;font-weight:700;letter-spacing:0.19em;line-height:1.2;padding-left: 15px;}
+/*--- Desktop Navigation ---*/
+.cs-nav-links-wrap {display:flex;align-items:center;justify-content:center;flex:1;min-width:0;}
+.cs-nav-links {display:flex;align-items:center;justify-content:center;gap:3px;margin:0;padding:0;list-style:none;}
+.cs-nav-item {position:relative;}
+.cs-nav-link {position:relative;display:flex;align-items:center;gap:7px;padding:12px 13px;color:var(--cs-text-secondary);font-size:12px;font-weight:600;white-space:nowrap;text-decoration:none;transition:color 0.25s ease;}
+.cs-nav-link::after {position:absolute;right:13px;bottom:5px;left:13px;height:2px;border-radius:2px;background:var(--cs-primary);content:"";transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease;}
+.cs-nav-link:hover,.cs-nav-link.cs-nav-active {color:var(--cs-white);}
+.cs-nav-link:hover::after,.cs-nav-link.cs-nav-active::after {transform:scaleX(1);}
+.cs-nav-link-number {color:var(--cs-primary);font-size:9px;font-weight:800;opacity:0;transform:translateY(4px);transition:opacity 0.25s ease,transform 0.25s ease;}
+.cs-nav-link:hover .cs-nav-link-number,.cs-nav-link.cs-nav-active .cs-nav-link-number {opacity:1;transform:translateY(0);}
+/*--- Navbar Actions ---*/
+.cs-nav-actions {display:flex;align-items:center;gap:14px;flex-shrink:0;}
+.cs-nav-login {position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 17px;overflow:hidden;border:1px solid rgba(244,119,50,0.55);border-radius:7px;color:var(--cs-white);background:var(--cs-primary);font-size:12px;font-weight:700;text-decoration:none;transition:background 0.3s ease,border-color 0.3s ease,transform 0.3s ease;}
+.cs-nav-login::before {position:absolute;inset:0;background:var(--cs-white);content:"";transform:translateX(-105%) skewX(-15deg);transition:transform 0.4s ease;z-index:0;}
+.cs-nav-login:hover::before {transform:translateX(105%) skewX(-15deg);}
+.cs-nav-login:hover {color:var(--cs-white);background:var(--cs-primary-dark);border-color:var(--cs-primary-dark);transform:translateY(-2px);}
+.cs-nav-login i,.cs-nav-login span {position:relative;z-index:1;}
+.cs-nav-login-arrow {font-size:14px;transition:transform 0.3s ease;}
+.cs-nav-login:hover .cs-nav-login-arrow {transform:translate(2px,-2px);}
+/*--- Mobile Toggle Button ---*/
+.cs-nav-toggle {display:none;align-items:center;justify-content:center;width:46px;height:46px;padding:0;border:1px solid var(--cs-border-light);border-radius:8px;color:var(--cs-white);background:var(--cs-surface);transition:background 0.3s ease,border-color 0.3s ease;}
+.cs-nav-toggle:hover {border-color:var(--cs-primary);background:var(--cs-surface-light);}
+.cs-nav-toggle-lines {display:flex;flex-direction:column;align-items:flex-end;gap:6px;width:21px;}
+.cs-nav-toggle-lines span {display:block;width:21px;height:2px;border-radius:2px;background:var(--cs-white);transition:width 0.3s ease,transform 0.3s ease;}
+.cs-nav-toggle-lines span:last-child {width:14px;background:var(--cs-primary);}
+.cs-nav-toggle:hover .cs-nav-toggle-lines span:last-child {width:21px;}
+.cs-nav-toggle.cs-nav-toggle-active .cs-nav-toggle-lines span:first-child {transform:translateY(4px) rotate(45deg);}
+.cs-nav-toggle.cs-nav-toggle-active .cs-nav-toggle-lines span:last-child {width:21px;transform:translateY(-4px) rotate(-45deg);}
+/*--- Mobile Backdrop ---*/
+.cs-nav-backdrop {position:fixed;inset:0;z-index:var(--cs-z-overlay,1040);visibility:hidden;background:rgba(0,0,0,0.68);opacity:0;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);transition:opacity 0.35s ease,visibility 0.35s ease;}
+.cs-nav-header.cs-nav-menu-open .cs-nav-backdrop {visibility:visible;opacity:1;}
+/*--- Mobile Navigation Panel ---*/
+.cs-nav-mobile {position:fixed;top:0;right:0;z-index:var(--cs-z-modal,1050);display:flex;flex-direction:column;width:min(410px,88vw);height:100vh;height:100dvh;padding:30px 28px 24px;overflow-y:auto;overscroll-behavior:contain;color:var(--cs-white);background:var(--cs-dark-soft);border-left:1px solid var(--cs-border);visibility:hidden;transform:translateX(105%);transition:transform 0.4s cubic-bezier(0.22,1,0.36,1),visibility 0.4s ease;}
+.cs-nav-header.cs-nav-menu-open .cs-nav-mobile {visibility:visible;transform:translateX(0);}
+.cs-nav-mobile-top {display:flex;align-items:center;justify-content:space-between;gap:15px;padding-bottom:25px;border-bottom:1px solid var(--cs-border);}
+.cs-nav-mobile-brand {display:flex;align-items:center;gap:10px;color:var(--cs-white);font-family:var(--cs-font-heading);font-size:19px;font-weight:800;letter-spacing:0.04em;}
+.cs-nav-mobile-brand:hover {color:var(--cs-white);}
+.cs-nav-mobile-brand .cs-nav-brand-icon {width:39px;height:39px;font-size:21px;}
+.cs-nav-mobile-brand-dot {color:var(--cs-primary);}
+.cs-nav-mobile-close {display:flex;align-items:center;justify-content:center;width:42px;height:42px;flex-shrink:0;border:1px solid var(--cs-border-light);border-radius:8px;color:var(--cs-white);background:var(--cs-surface);font-size:17px;transition:color 0.25s ease,background 0.25s ease,border-color 0.25s ease;}
+.cs-nav-mobile-close:hover {color:var(--cs-white);background:var(--cs-primary);border-color:var(--cs-primary);}
+.cs-nav-mobile-label {margin:34px 0 14px;color:var(--cs-text-muted);font-size:10px;font-weight:700;letter-spacing:0.16em;}
+/*--- Mobile Navigation Links ---*/
+.cs-nav-mobile-links {margin:0;padding:0;list-style:none;}
+.cs-nav-mobile-links li {border-bottom:1px solid var(--cs-border);}
+.cs-nav-mobile-link {position:relative;display:grid;grid-template-columns:30px minmax(0,1fr) 20px;align-items:center;gap:12px;min-height:66px;padding:12px 4px;color:var(--cs-text-secondary);font-family:var(--cs-font-heading);font-size:clamp(15px,4vw,19px);font-weight:600;text-decoration:none;transition:color 0.25s ease,padding 0.25s ease;}
+.cs-nav-mobile-link:hover,.cs-nav-mobile-link.cs-nav-active {padding-left:10px;color:var(--cs-white);}
+.cs-nav-mobile-link::before {position:absolute;top:0;bottom:0;left:-28px;width:3px;background:var(--cs-primary);content:"";transform:scaleY(0);transform-origin:center;transition:transform 0.25s ease;}
+.cs-nav-mobile-link:hover::before,.cs-nav-mobile-link.cs-nav-active::before {transform:scaleY(1);}
+.cs-nav-mobile-number {color:var(--cs-primary);font-family:var(--cs-font-body);font-size:10px;font-weight:800;}
+.cs-nav-mobile-link>span:nth-child(2) {overflow-wrap:anywhere;}
+.cs-nav-mobile-link>i {justify-self:end;color:var(--cs-text-muted);font-size:16px;transition:color 0.25s ease,transform 0.25s ease;}
+.cs-nav-mobile-link:hover>i,.cs-nav-mobile-link.cs-nav-active>i {color:var(--cs-primary);transform:translate(2px,-2px);}
+/*--- Mobile Navigation Footer ---*/
+.cs-nav-mobile-bottom {margin-top:auto;padding-top:34px;}
+.cs-nav-mobile-caption {margin-bottom:18px;color:var(--cs-text-muted);font-size:10px;font-weight:700;letter-spacing:0.14em;}
+.cs-nav-mobile-login {display:flex;align-items:center;gap:12px;min-height:52px;padding:14px 16px;border:1px solid rgba(244,119,50,0.45);border-radius:7px;color:var(--cs-white);background:rgba(244,119,50,0.10);font-size:12px;font-weight:700;transition:background 0.25s ease,border-color 0.25s ease;}
+.cs-nav-mobile-login>i:first-child {color:var(--cs-primary);font-size:17px;}
+.cs-nav-mobile-login>i:last-child {margin-left:auto;transition:transform 0.25s ease;}
+.cs-nav-mobile-login:hover {color:var(--cs-white);background:rgba(244,119,50,0.18);border-color:var(--cs-primary);}
+.cs-nav-mobile-login:hover>i:last-child {transform:translate(3px,-3px);}
+.cs-nav-mobile-status {display:flex;align-items:center;gap:9px;margin-top:24px;color:var(--cs-text-muted);font-size:9px;font-weight:700;letter-spacing:0.09em;}
+.cs-nav-mobile-status>span {width:7px;height:7px;flex-shrink:0;border-radius:50%;background:var(--cs-success);box-shadow:0 0 12px rgba(50,201,138,0.45);}
+/*--- Body Scroll Lock ---*/
+body.cs-nav-scroll-locked {overflow:hidden;overscroll-behavior:none;}
+/*--- Responsive 1050px ---*/
+@media(max-width:1050px){.cs-nav-container {gap:18px;min-height:80px;}.cs-nav-brand {gap:9px;}.cs-nav-brand-icon {width:42px;height:42px;font-size:23px;}.cs-nav-logo-img {width:115px;}.cs-nav-links {gap:0;}.cs-nav-link {gap:5px;padding:12px 9px;font-size:11px;}.cs-nav-link::after {right:9px;left:9px;}.cs-nav-login {gap:7px;min-height:43px;padding-inline:12px;font-size:11px;}.cs-nav-actions {gap:10px;}}
+/*--- Responsive 991px ---*/
+@media(max-width:991px){.cs-nav-container {min-height:76px;}.cs-nav-links-wrap {display:none;}.cs-nav-actions {margin-left:auto;}.cs-nav-toggle {display:flex;}.cs-nav-login {min-height:44px;padding-inline:16px;font-size:12px; display: none;}}
+/*--- Responsive 767px ---*/
+@media(max-width:767px){.cs-nav-container {min-height:72px;padding-inline:20px;}.cs-nav-brand-icon {width:40px;height:40px;}.cs-nav-logo-img {width:110px;}.cs-nav-brand-tagline {font-size:8px;}.cs-nav-mobile {padding:25px 24px 22px;}}
+/*--- Responsive 575px ---*/
+@media(max-width:575px){.cs-nav-container {min-height:68px;padding-inline:16px;gap:10px;}.cs-nav-brand {gap:8px;}.cs-nav-brand-icon {width:37px;height:37px;border-radius:10px;font-size:21px;}.cs-nav-logo-img {width:110px;}.cs-nav-brand-tagline {font-size:8px;letter-spacing:0.14em;}.cs-nav-actions {gap:8px;}.cs-nav-login {gap:7px;min-height:40px;padding:0 11px;font-size:11px;}.cs-nav-login-arrow {display:none;}.cs-nav-toggle {width:40px;height:40px;}.cs-nav-mobile {width:min(370px,90vw);padding:22px 20px 20px;}.cs-nav-mobile-link {min-height:60px;}}
+/*--- Responsive 320px ---*/
+@media(max-width:320px){.cs-nav-container {padding-inline:12px;gap:6px;}.cs-nav-brand {gap:6px;}.cs-nav-brand-icon {width:33px;height:33px;font-size:18px;}.cs-nav-logo-img {width:110px;}.cs-nav-brand-tagline {font-size:8px;letter-spacing:0.10em;}.cs-nav-actions {gap:6px;}.cs-nav-login {gap:5px;min-height:37px;padding-inline:8px;font-size:10px;}.cs-nav-login i:first-child {font-size:12px;}.cs-nav-toggle {width:36px;height:37px;}.cs-nav-toggle-lines {width:18px;}.cs-nav-toggle-lines span {width:18px;}.cs-nav-toggle:hover .cs-nav-toggle-lines span:last-child {width:18px;}.cs-nav-mobile {width:92vw;padding:20px 18px;}}
+/*--- Reduced Motion ---*/
+@media(prefers-reduced-motion:reduce){.cs-nav-main,.cs-nav-link,.cs-nav-link::after,.cs-nav-mobile,.cs-nav-mobile-link,.cs-nav-backdrop,.cs-nav-login,.cs-nav-login::before {transition:none!important;}}
+
+
+
+/*--- Sticky Navbar Fix ---*/
+
+/*--- Fixed Navbar ---*/
+#cs-nav-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;
+}
+/*--- Navbar Scroll Appearance ---*/
+#cs-nav-header .cs-nav-main {
+    width: 100%;
+}
+#cs-nav-header.cs-nav-scrolled .cs-nav-main {
+    background: rgba(13, 15, 18, 0.98);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+}
+/*--- Prevent Page Content From Hiding Behind Navbar ---*/
+body {
+    padding-top: 88px;
+}
+/*--- Responsive Navbar Spacing ---*/
+@media (max-width: 1050px) {
+    body {
+        padding-top: 80px;
+    }
+}
+@media (max-width: 991px) {
+    body {
+        padding-top: 76px;
+    }
+}
+@media (max-width: 767px) {
+    body {
+        padding-top: 72px;
+    }
+}
+@media (max-width: 575px) {
+    body {
+        padding-top: 68px;
+    }
+}
+/*--- Mobile Menu Layering ---*/
+#cs-nav-backdrop {
+    z-index: 1040;
+}
+#cs-nav-mobile {
+    z-index: 1050;
+}
+#cs-nav-header.cs-nav-menu-open #cs-nav-backdrop {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+#cs-nav-header.cs-nav-menu-open #cs-nav-mobile {
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+/*--- Reduced Motion ---*/
+@media (prefers-reduced-motion: reduce) {
+    #cs-nav-header,
+    #cs-nav-header .cs-nav-main {
+        transition: none;
+    }
+}
+
+/*--- Mobile Navigation Fix ---*/
+@media (max-width: 991.98px) {
+
+    #cs-nav-mobile {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: min(85%, 380px);
+        height: 100vh;
+        height: 100dvh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 1060;
+        background: var(--cs-dark, #101010);
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(100%);
+        transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+        -webkit-overflow-scrolling: touch;
+    }
+    #cs-nav-mobile.cs-nav-mobile-open {
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+    }
+    #cs-nav-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 1055;
+        background: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    #cs-nav-backdrop.cs-nav-backdrop-visible {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    #cs-nav-toggle {
+        position: relative;
+        z-index: 1070;
+        cursor: pointer;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    #cs-nav-mobile,
+    #cs-nav-backdrop {
+        transition: none;
+    }
+}

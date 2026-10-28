@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101318">
+  <title>Dashboard | Car Service Appointment Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+
+<body class="cs-db-body">
+  <!--- Dashboard Sidebar Overlay --->
+  <div class="cs-db-overlay" id="cs-db-overlay"></div>
+  <!--- Dashboard Sidebar --->
+  <aside class="cs-db-sidebar" id="cs-db-sidebar" aria-label="Dashboard navigation">
+    <div class="cs-db-sidebar-brand">
+      <a href="index.html" class="cs-db-logo" aria-label="Stackly home">
+        <img src="assets/images/brand-logo.webp" alt="Stackly">
+      </a>
+      <button type="button" class="cs-db-sidebar-close" id="cs-db-sidebar-close" aria-label="Close navigation">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <!--- Mobile User Information --->
+    <div class="cs-db-mobile-user">
+      <div class="cs-db-avatar cs-db-avatar-small">
+        <img src="assets/images/profile-2.webp" alt="Profile"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+        <span><i class="bi bi-person-fill"></i></span>
+      </div>
+      <div class="cs-db-mobile-user-info">
+        <strong id="cs-db-mobile-user-name">My Account</strong>
+        <span id="cs-db-mobile-user-email">Loading email...</span>
+      </div>
+    </div>
+    <!--- Sidebar Navigation --->
+    <div class="cs-db-nav-heading">WORKSPACE</div>
+    <nav class="cs-db-nav">
+      <a href="client-dashboard.html" class="cs-db-nav-link cs-db-nav-active" data-db-page="dashboard">
+        <i class="bi bi-grid-1x2"></i><span>Dashboard</span>
+      </a>
+      <a href="client-appointments.html" class="cs-db-nav-link" data-db-page="appointments">
+        <i class="bi bi-calendar2-check"></i><span>Appointments</span>
+      </a>
+      <a href="client-vehicles.html" class="cs-db-nav-link" data-db-page="vehicles">
+        <i class="bi bi-car-front"></i><span>Vehicles</span>
+      </a>
+      <a href="client-profile.html" class="cs-db-nav-link" data-db-page="profile">
+        <i class="bi bi-person-gear"></i><span>My Profile</span>
+      </a>
+      <div class="cs-db-sidebar-bottom">
+        <div class="cs-db-sidebar-divider"></div>
+        <button type="button" class="cs-db-nav-link cs-db-logout" id="cs-db-logout">
+          <i class="bi bi-box-arrow-left"></i><span>Logout</span>
+        </button>
+      </div>
+    </nav>
+    <!--- Sidebar Footer --->
+    <div class="cs-db-sidebar-footer">
+      <span class="cs-db-status-dot"></span>
+      <span>STACKLY AUTOMOTIVE CARE</span>
+    </div>
+  </aside>
+  <!--- Dashboard Main Area --->
+  <div class="cs-db-main">
+    <!--- Dashboard Topbar --->
+    <header class="cs-db-topbar">
+      <div class="cs-db-topbar-left">
+        <button type="button" class="cs-db-menu-toggle" id="cs-db-menu-toggle" aria-label="Open dashboard navigation"
+          aria-controls="cs-db-sidebar" aria-expanded="false">
+          <i class="bi bi-three-dots"></i>
+        </button>
+        <div class="cs-db-page-heading">
+          <span class="cs-db-page-eyebrow">STACKLY / WORKSPACE</span>
+          <h1 id="cs-db-page-title">Dashboard</h1>
+        </div>
+      </div>
+      <!--- Desktop and Tablet User Information --->
+      <div class="cs-db-topbar-right">
+        <div class="cs-db-topbar-user">
+          <span class="cs-db-user-label">SIGNED IN AS</span>
+          <strong id="cs-db-topbar-email">Loading email...</strong>
+        </div>
+        <button type="button" class="cs-db-profile-button" id="cs-db-profile-button" aria-label="Open my profile"
+          title="My Profile">
+          <img src="assets/images/profile-2.webp" alt="Profile"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
+          <span><i class="bi bi-person-fill"></i></span>
+          <i class="bi bi-chevron-down cs-db-profile-chevron"></i>
+        </button>
+      </div>
+    </header>
+
+    <!--- Dashboard Content --->
+
+    <!--- Client Overview Content --->
+    <main class="cs-db-content cs-co" id="cs-db-content">
+      <!--- Welcome Section --->
+      <section class="cs-co-welcome">
+        <div class="cs-co-welcome-copy">
+          <span class="cs-co-eyebrow">YOUR AUTOMOTIVE SPACE</span>
+          <h2>Welcome back, <span id="cs-co-customer-name">there</span>.</h2>
+          <p>Everything your vehicle needs, all in one place. Here's your service overview.</p>
+          <div class="cs-co-welcome-meta"><i class="bi bi-envelope"></i><span id="cs-co-customer-email">Loading your
+              account...</span></div>
+          <a href="404.html" class="cs-co-primary-btn"><i class="bi bi-calendar2-plus"></i> Manage
+            Appointments</a>
+        </div>
+        <div class="cs-co-welcome-art" aria-hidden="true">
+          <div class="cs-co-art-ring cs-co-ring-one"></div>
+          <div class="cs-co-art-ring cs-co-ring-two"></div>
+          <i class="bi bi-car-front-fill cs-co-car-icon"></i>
+          <span class="cs-co-art-label">CARE IN EVERY MILE</span>
+        </div>
+      </section>
+
+      <!--- Overview Statistics --->
+      <section class="cs-co-stats" aria-label="Your automotive summary">
+        <article class="cs-co-stat">
+          <div class="cs-co-stat-top"><span>Total Appointments</span><span class="cs-co-stat-icon"><i
+                class="bi bi-calendar2-check"></i></span></div>
+          <strong id="cs-co-total-appointments">3</strong><small>All service bookings</small>
+        </article>
+        <article class="cs-co-stat">
+          <div class="cs-co-stat-top"><span>Upcoming</span><span class="cs-co-stat-icon cs-co-blue"><i
+                class="bi bi-calendar-event"></i></span></div>
+          <strong id="cs-co-upcoming">2</strong><small>Scheduled visits</small>
+        </article>
+        <article class="cs-co-stat">
+          <div class="cs-co-stat-top"><span>Registered Vehicles</span><span class="cs-co-stat-icon cs-co-purple"><i
+                class="bi bi-car-front"></i></span></div>
+          <strong id="cs-co-total-vehicles">2</strong><small>Your vehicles</small>
+        </article>
+        <article class="cs-co-stat">
+          <div class="cs-co-stat-top"><span>Completed Services</span><span class="cs-co-stat-icon cs-co-green"><i
+                class="bi bi-check2-circle"></i></span></div>
+          <strong id="cs-co-completed">1</strong><small>Completed bookings</small>
+        </article>
+      </section>
+
+      <!--- Main Overview Grid --->
+      <section class="cs-co-main-grid">
+        <!--- Upcoming Appointments --->
+        <article class="cs-co-panel">
+          <div class="cs-co-panel-head">
+            <div><span class="cs-co-eyebrow">STAY ON SCHEDULE</span>
+              <h3>Upcoming Appointments</h3>
+              <p>Your next visits to the workshop.</p>
+            </div>
+            <a href="404.html" class="cs-co-text-link">View all <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+          <div class="cs-co-appointment-list" id="cs-co-upcoming-list"></div>
+          <div class="cs-co-empty" id="cs-co-no-appointments" hidden><i class="bi bi-calendar2-x"></i>
+            <p>No upcoming appointments.</p><a href="404.html">Book a service</a>
+          </div>
+        </article>
+
+        <!--- Vehicle Summary --->
+        <article class="cs-co-panel">
+          <div class="cs-co-panel-head">
+            <div><span class="cs-co-eyebrow">YOUR GARAGE</span>
+              <h3>My Vehicles</h3>
+              <p>Vehicles in your account.</p>
+            </div>
+            <a href="404.html" class="cs-co-text-link">View all <i class="bi bi-arrow-up-right"></i></a>
+          </div>
+          <div class="cs-co-vehicle-list" id="cs-co-vehicle-list"></div>
+          <a href="404.html" class="cs-co-add-vehicle"><i class="bi bi-plus-circle"></i> Manage your
+            vehicles</a>
+        </article>
+      </section>
+
+      <!--- Recent Service Activity --->
+      <section class="cs-co-panel cs-co-activity-panel">
+        <div class="cs-co-panel-head">
+          <div><span class="cs-co-eyebrow">SERVICE HISTORY</span>
+            <h3>Recent Service Activity</h3>
+            <p>A quick look at your recent bookings.</p>
+          </div>
+          <a href="404.html" class="cs-co-text-link">All appointments <i
+              class="bi bi-arrow-up-right"></i></a>
+        </div>
+        <div class="cs-co-table-wrap">
+          <table class="cs-co-table">
+            <thead>
+              <tr>
+                <th>Appointment</th>
+                <th>Vehicle</th>
+                <th>Service</th>
+                <th>Date</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="cs-co-activity-body"></tbody>
+          </table>
+        </div>
+        <div class="cs-co-mobile-activity" id="cs-co-mobile-activity"></div>
+      </section>
+
+      <!--- Quick Actions --->
+      <section class="cs-co-quick-section">
+        <div class="cs-co-section-heading">
+          <div><span class="cs-co-eyebrow">QUICK ACCESS</span>
+            <h3>What would you like to do?</h3>
+          </div>
+        </div>
+        <div class="cs-co-quick-grid">
+          <a href="client-appointments.html" class="cs-co-quick-card"><span class="cs-co-quick-icon"><i
+                class="bi bi-calendar2-plus"></i></span><span><strong>Appointments</strong><small>View and manage your
+                bookings</small></span><i class="bi bi-arrow-up-right cs-co-quick-arrow"></i></a>
+          <a href="client-vehicles.html" class="cs-co-quick-card"><span class="cs-co-quick-icon cs-co-quick-blue"><i
+                class="bi bi-car-front"></i></span><span><strong>My Vehicles</strong><small>Manage your registered
+                vehicles</small></span><i class="bi bi-arrow-up-right cs-co-quick-arrow"></i></a>
+          <a href="client-profile.html" class="cs-co-quick-card"><span class="cs-co-quick-icon cs-co-quick-green"><i
+                class="bi bi-person-gear"></i></span><span><strong>My Profile</strong><small>Update your personal
+                details</small></span><i class="bi bi-arrow-up-right cs-co-quick-arrow"></i></a>
+        </div>
+      </section>
+    </main>
+    <!--- Client Overview Content End --->
+
+
+    <!--- Dashboard Footer --->
+    <footer class="cs-db-footer">
+      <span>© <span id="cs-db-year"></span> Stackly Automotive Care</span>
+      <span>Built for better journeys <i class="bi bi-arrow-up-right"></i></span>
+    </footer>
+  </div>
+  <!--- End Dashboard Layout --->
+  <script src="assets/js/dashboard.js" defer></script>
+  <script src="assets/js/client-overview.js" defer></script>
+</body>
+
+</html>

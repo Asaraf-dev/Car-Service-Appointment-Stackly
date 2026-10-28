@@ -1,0 +1,75 @@
+<!--- NavBar --->
+<header class="cs-nav-header" id="cs-nav-header">
+    <nav class="cs-nav-main" aria-label="Main navigation">
+        <div class="container cs-nav-container">
+            <!--- Brand Logo --->
+            <a href="index.html" class="cs-nav-brand" aria-label="Stackly home">
+                <span class="cs-nav-brand-content">
+                    <img src="assets/images/brand-logo.webp" alt="Stackly" class="cs-nav-logo-img">
+                    <span class="cs-nav-brand-tagline">AUTOMOTIVE CARE</span>
+                </span>
+            </a>
+            <!--- Desktop Navigation --->
+            <div class="cs-nav-links-wrap" id="cs-nav-links-wrap">
+                <ul class="cs-nav-links">
+                    <li class="cs-nav-item"><a href="index.html" class="cs-nav-link" data-page="index.html"><span
+                                class="cs-nav-link-number">01</span><span>Home</span></a></li>
+                    <li class="cs-nav-item"><a href="about.html" class="cs-nav-link" data-page="about.html"><span
+                                class="cs-nav-link-number">02</span><span>About</span></a></li>
+                    <li class="cs-nav-item"><a href="services.html" class="cs-nav-link" data-page="services.html"><span
+                                class="cs-nav-link-number">03</span><span>Services</span></a></li>
+                    <li class="cs-nav-item"><a href="appointment.html" class="cs-nav-link"
+                            data-page="appointment.html"><span
+                                class="cs-nav-link-number">04</span><span>Appointment</span></a></li>
+                    <li class="cs-nav-item"><a href="contact.html" class="cs-nav-link" data-page="contact.html"><span
+                                class="cs-nav-link-number">05</span><span>Contact</span></a></li>
+                </ul>
+            </div>
+            <!--- Navigation Actions --->
+            <div class="cs-nav-actions">
+                <a href="login.html" class="cs-nav-login"><i class="bi bi-person-circle"></i><span>Login</span><i
+                        class="bi bi-arrow-up-right cs-nav-login-arrow"></i></a>
+                <button class="cs-nav-toggle" id="cs-nav-toggle" type="button" aria-label="Open navigation menu"
+                    aria-controls="cs-nav-mobile" aria-expanded="false">
+                    <span class="cs-nav-toggle-lines"><span></span><span></span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!--- Mobile Navigation Overlay --->
+    <div class="cs-nav-backdrop" id="cs-nav-backdrop"></div>
+    <!--- Mobile Navigation Panel --->
+    <aside class="cs-nav-mobile" id="cs-nav-mobile" aria-label="Mobile navigation" aria-hidden="true" inert>
+        <div class="cs-nav-mobile-top">
+            <a href="index.html" class="cs-nav-mobile-brand"><span class="cs-nav-brand-icon"><i
+                        class="bi bi-car-front-fill"></i></span><span>STACKLY<span
+                        class="cs-nav-mobile-brand-dot">.</span></span></a>
+            <button class="cs-nav-mobile-close" id="cs-nav-mobile-close" type="button"
+                aria-label="Close navigation menu"><i class="bi bi-x-lg"></i></button>
+        </div>
+        <div class="cs-nav-mobile-label">NAVIGATE YOUR JOURNEY</div>
+        <ul class="cs-nav-mobile-links">
+            <li><a href="index.html" class="cs-nav-mobile-link" data-page="index.html"><span
+                        class="cs-nav-mobile-number">01</span><span>Home</span><i class="bi bi-arrow-up-right"></i></a>
+            </li>
+            <li><a href="about.html" class="cs-nav-mobile-link" data-page="about.html"><span
+                        class="cs-nav-mobile-number">02</span><span>About</span><i class="bi bi-arrow-up-right"></i></a>
+            </li>
+            <li><a href="services.html" class="cs-nav-mobile-link" data-page="services.html"><span
+                        class="cs-nav-mobile-number">03</span><span>Services</span><i
+                        class="bi bi-arrow-up-right"></i></a></li>
+            <li><a href="appointment.html" class="cs-nav-mobile-link" data-page="appointment.html"><span
+                        class="cs-nav-mobile-number">04</span><span>Appointment</span><i
+                        class="bi bi-arrow-up-right"></i></a></li>
+            <li><a href="contact.html" class="cs-nav-mobile-link" data-page="contact.html"><span
+                        class="cs-nav-mobile-number">05</span><span>Contact</span><i
+                        class="bi bi-arrow-up-right"></i></a></li>
+        </ul>
+        <div class="cs-nav-mobile-bottom">
+            <p class="cs-nav-mobile-caption">YOUR DRIVE. OUR PRIORITY.</p>
+            <a href="login.html" class="cs-nav-mobile-login"><i class="bi bi-person-circle"></i> Login to your account
+                <i class="bi bi-arrow-up-right"></i></a>
+            <div class="cs-nav-mobile-status"><span></span> PRECISION CARE. EVERY MILE.</div>
+        </div>
+    </aside>
+</header>
