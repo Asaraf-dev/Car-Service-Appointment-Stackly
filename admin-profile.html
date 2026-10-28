@@ -92,7 +92,7 @@
                 </div>
                 <button type="button" class="cs-db-profile-button" id="cs-db-profile-button"
                     aria-label="Open my profile" title="My Profile">
-                    <img src="assets/images/profile-2.webp" alt="Profile"
+                    <img src="assets/images/profile-1.webp" alt="Profile"
                         onerror="this.style.display='none';this.nextElementSibling.style.display='grid'">
                     <span><i class="bi bi-person-fill"></i></span>
                     <i class="bi bi-chevron-down cs-db-profile-chevron"></i>
@@ -118,7 +118,9 @@
             <section class="cs-ap-overview">
                 <div class="cs-ap-cover"></div>
                 <div class="cs-ap-overview-content">
-                    <div class="cs-ap-avatar"><img src="assets/images/profile-1.webp" alt=""></div>
+                    <div class="cs-ap-avatar" id="cs-ap-avatar">
+                        <img src="assets/images/profile-1.webp" alt="Profile">
+                    </div>
                     <div class="cs-ap-identity">
                         <span class="cs-ap-eyebrow">ADMINISTRATOR ACCOUNT</span>
                         <h3 id="cs-ap-display-name">Admin Account</h3>
@@ -199,7 +201,10 @@
                     <article class="cs-ap-security-card">
                         <span class="cs-ap-security-icon"><i class="bi bi-shield-check"></i></span>
                         <h3>Keep your account secure</h3>
-                        <a href="404.html"><div class="cs-ap-security-note"><i class="bi bi-info-circle"></i><span>Change Password.</span></div></a>
+                        <a href="404.html">
+                            <div class="cs-ap-security-note"><i class="bi bi-info-circle"></i><span>Change
+                                    Password.</span></div>
+                        </a>
                     </article>
                 </aside>
             </section>
